@@ -11,8 +11,12 @@ class CustomFormWidget extends StatefulWidget {
   final TextEditingController textEditingController;
 
   //make optional password field
+  String description;
+  int maxLines;
   bool isPassword;
+  bool isDescription;
   bool isMandatory;
+  bool isSvg;
 
   CustomFormWidget({
     super.key,
@@ -20,8 +24,12 @@ class CustomFormWidget extends StatefulWidget {
     required this.hint,
     required this.svg,
     required this.textEditingController,
+    this.isDescription = false,
     this.isPassword = false,
     this.isMandatory = false,
+    this.isSvg = true,
+    this.description = "",
+    this.maxLines = 1,
   });
 
   @override
@@ -43,27 +51,43 @@ class _CustomFormWidgetState extends State<CustomFormWidget> {
           children: [
             Text(widget.label, style: textTheme.bodyMedium),
             widget.isMandatory ?
-            Text("*", style: textTheme.bodyMedium!.copyWith!(color: Colors.red))
+            Text("*", style: textTheme.bodyMedium!.copyWith!(color: ColorValue.redColor))
                 : Container()
           ],
         ),
+        widget.isDescription ? Container(
+          child: Column(
+            children: [
+              SizedBox(height: 8.h),
+              Text(
+                widget.description,
+                style: textTheme.bodySmall
+              ),
+            ],
+          ),
+        ) : Container(),
         SizedBox(height: 8.h),
         TextFormField(
           controller: widget.textEditingController,
           obscureText: widget.isPassword ? hidePassword : false,
+          maxLines: widget.maxLines,
           decoration: InputDecoration(
             contentPadding: EdgeInsets.symmetric(
               horizontal: 20.w,
-              vertical: 2.h,
+              vertical: widget.maxLines>1 ? 10.h : 2.h,
             ),
             hintText: widget.hint,
             hintStyle: textTheme.bodyMedium!.copyWith!(
               color: ColorValue.primary20Color,
             ),
-            prefixIcon: Padding(
+
+            prefixIcon:
+            widget.isSvg ?
+            Padding(
               padding: EdgeInsets.all(10.w),
               child: SvgPicture.asset("assets/icons/${widget.svg}"),
-            ),
+            )
+            : null,
 
             suffixIcon:
             widget.isPassword

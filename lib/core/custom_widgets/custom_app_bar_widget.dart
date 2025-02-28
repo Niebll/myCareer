@@ -11,6 +11,8 @@ class CustomAppBarWidget extends StatelessWidget implements PreferredSizeWidget 
   Widget build(BuildContext context) {
     return AppBar(
       title: Text(title), // Pastikan title adalah Widget
+      elevation: 0,
+      surfaceTintColor: Colors.white,
       bottom: PreferredSize(
         preferredSize: Size.fromHeight(1.h),
         child: Container(

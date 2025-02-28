@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -8,9 +9,12 @@ import 'package:intl/intl.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:mycareer_new/core/custom_widgets/custom_app_bar_widget.dart';
 import 'package:mycareer_new/core/custom_widgets/custom_form_widget.dart';
+import 'package:mycareer_new/core/nav/nav.dart';
 import 'package:mycareer_new/core/theme/color_value.dart';
 import 'package:mycareer_new/features/auth/page/register/pendidikan_terakhir.dart';
 import 'package:mycareer_new/features/auth/widget/custom_progress_bar_register_widget.dart';
+
+import '../../../../core/custom_widgets/custom_button_widget.dart';
 
 class DataDiriPage extends StatefulWidget {
   const DataDiriPage({Key? key}) : super(key: key);
@@ -100,6 +104,30 @@ class _DataDiriPageState extends State<DataDiriPage> {
     }
   }
 
+  final List<String> items = [
+    'Item1',
+    'Item2',
+    'Item3',
+    'Item4',
+    'Item5',
+    'Item6',
+    'Item7',
+    'Item8',
+  ];
+  String? selectedValue;
+
+  final List<String> jenisKelaminList = [
+    'Item1',
+    'Item2',
+    'Item3',
+    'Item4',
+    'Item5',
+    'Item6',
+    'Item7',
+    'Item8',
+  ];
+
+
   @override
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
@@ -163,13 +191,6 @@ class _DataDiriPageState extends State<DataDiriPage> {
               padding: EdgeInsets.symmetric(horizontal: 16.w),
               child: Column(
                 children: [
-                  CustomFormWidget(
-                    label: "E-Mail",
-                    hint: "Masukkan email",
-                    svg: "form_mail.svg",
-                    textEditingController: TextEditingController(),
-                    isMandatory: true,
-                  ),
                   SizedBox(height: 16.h),
                   Column(
                     children: [
@@ -187,7 +208,7 @@ class _DataDiriPageState extends State<DataDiriPage> {
                             style: TextStyle(
                               fontSize: 12.sp,
                               fontWeight: FontWeight.w600,
-                              color: Colors.red,
+                              color: ColorValue.redColor,
                             ),
                           ),
                         ],
@@ -230,7 +251,7 @@ class _DataDiriPageState extends State<DataDiriPage> {
                       ),
                     ],
                   ),
-                  SizedBox(height: 16),
+                  SizedBox(height: 16.h),
                   Column(
                     children: [
                       Row(
@@ -247,156 +268,277 @@ class _DataDiriPageState extends State<DataDiriPage> {
                             style: TextStyle(
                               fontSize: 12.sp,
                               fontWeight: FontWeight.w600,
-                              color: Colors.red,
+                              color: ColorValue.redColor,
                             ),
                           ),
                         ],
                       ),
                       SizedBox(height: 8.h),
-                      DropdownButtonFormField<String>(
-                        style: TextStyle(
-                          fontSize: 12.sp,
-                          color: ColorValue.netralColor,
-                        ),
-                        decoration: InputDecoration(
-                          prefixIcon: Padding(
-                            padding: EdgeInsets.all(10.w),
-                            child: SvgPicture.asset(
-                              "assets/icons/form_intersex.svg",
-                              color: ColorValue.primary90Color,
-                            ),
-                          ),
-                          contentPadding: EdgeInsets.symmetric(
-                            horizontal: 16.w,
-                            vertical: 12.h,
-                          ),
-                          border: OutlineInputBorder(
+                      DropdownButtonHideUnderline(
+                        child: Container(
+                          padding: EdgeInsets.symmetric(horizontal: 8.h),
+                          decoration: BoxDecoration(
+                            border: Border.all(color: ColorValue.primary90Color, width: 1),
                             borderRadius: BorderRadius.circular(8.r),
-                            borderSide: BorderSide(
-                              color: ColorValue.primary90Color,
-                            ),
+                            color: Colors.white,
                           ),
-                          focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(8.r),
-                            borderSide: BorderSide(
-                              color: ColorValue.primary90Color,
-                            ),
-                          ),
-                        ),
-                        hint: Text(
-                          'Masukkan Jenis Kelamin',
-                          style: TextStyle(
-                            fontSize: 12.sp,
-                            color: ColorValue.primary20Color,
-                          ),
-                        ),
-                        items: [
-                          DropdownMenuItem(
-                            value: 'Laki-laki',
-                            child: Text('Laki-laki'),
-                          ),
-                          DropdownMenuItem(
-                            value: 'Perempuan',
-                            child: Text('Perempuan'),
-                          ),
-                        ],
-                        onChanged: (value) {
-                          // Handle perubahan nilai dropdown
-                        },
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: 16.h),
-                  Column(
-                    children: [
-                      Row(
-                        children: [
-                          Text(
-                            "Nomor Whatsapp",
-                            style: TextStyle(
-                              fontSize: 12.sp,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                          Text(
-                            "*",
-                            style: TextStyle(
-                              fontSize: 12.sp,
-                                fontWeight: FontWeight.w600,
-                              color: Colors.red,
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: 8.h),
-                      Text(
-                        "Pastikan nomor Whatsapp aktif, agar kamu tidak kehilangan kesempatan untuk mendapatkan panggilan kerja.",
-                        style: TextStyle(
-                          fontSize: 12.sp,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      SizedBox(height: 8),
-                      TextFormField(
-                        controller: _formNoHpController,
-                        keyboardType: TextInputType.number,
-                        decoration: InputDecoration(
-                          prefixIcon: Padding(
-                            padding: EdgeInsets.all(10.w),
-                            child: Container(
-                              width: 30.w,
-                              decoration: BoxDecoration(
-                                color: ColorValue.primary90Color,
-                                borderRadius: BorderRadius.circular(4.r),
+                          child: Row(
+                            children: [
+                              SvgPicture.asset(
+                                'assets/icons/form_intersex.svg', // Ganti dengan ikon yang kamu inginkan
                               ),
-                              child: Center(
-                                child: Text(
-                                  "+62",
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    fontWeight: FontWeight.w600,
-                                    color: Colors.white,
+                              Expanded(
+                                child: DropdownButton2<String>(
+                                  isExpanded: true,
+                                  hint: Text(
+                                    'Pilih Jenis Kelamin',
+                                    style: textTheme.bodyMedium!.copyWith(
+                                      color: ColorValue.primary20Color,
+                                    ),
+                                  ),
+                                  items: items
+                                      .map(
+                                        (item) => DropdownMenuItem<String>(
+                                      value: item,
+                                      child: Text(
+                                        item,
+                                        style: textTheme.bodyMedium,
+                                      ),
+                                    ),
+                                  )
+                                      .toList(),
+                                  value: selectedValue,
+                                  onChanged: (value) {
+                                    setState(() {
+                                      selectedValue = value;
+                                    });
+                                  },
+                                  buttonStyleData: const ButtonStyleData(
+                                    padding: EdgeInsets.zero, // Hapus padding agar pas dalam container
+                                  ),
+                                  iconStyleData: IconStyleData(
+                                    icon: SvgPicture.asset(
+                                      'assets/icons/form_arrow_down.svg',
+                                    ),
+                                  ),
+                                  dropdownStyleData: DropdownStyleData(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(8.r),
+                                      color: Colors.white,
+                                      border: Border.all(color: ColorValue.primary90Color, width: 1),
+                                    ),
+                                    padding: EdgeInsets.zero,
                                   ),
                                 ),
                               ),
+                            ],
+                          ),
+                        ),
+                      ),
+
+
+                    ],
+                  ),
+                  SizedBox(height: 16.h),
+                  CustomFormWidget(
+                    label: "E-Mail",
+                    hint: "Masukkan email",
+                    svg: "form_mail.svg",
+                    textEditingController: TextEditingController(),
+                    isMandatory: true,
+                    isDescription: true,
+                    description:
+                        "Pastikan email aktif, agar dapat digunakan untuk di laman login",
+                  ),
+
+                  SizedBox(height: 16.h),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          Text("Pilih Lokasi Saat Ini", style: textTheme.bodyMedium),
+                          Text(
+                            "*",
+                            style: textTheme.bodyMedium!.copyWith(
+                              color: ColorValue.redColor,
                             ),
                           ),
-                          hintText: 'Masukkan nomor whatsapp',
-                          hintStyle: TextStyle(
-                            fontSize: 12.sp,
-                            color: ColorValue.primary20Color,
-                          ),
-                          contentPadding: EdgeInsets.symmetric(
-                            horizontal: 16.w,
-                            vertical: 12.h,
-                          ),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(8.r),
-                            borderSide: BorderSide(
-                              color: ColorValue.primary90Color,
+                        ],
+                      ),
+                      SizedBox(height: 8.h),
+                      DropdownButtonHideUnderline(
+                        child: DropdownButtonHideUnderline(
+                          child: DropdownButton2<String>(
+                            isExpanded: true,
+                            hint: Text(
+                              'Pilih Provinsi',
+                              style: textTheme.bodyMedium!.copyWith(
+                                color: ColorValue.primary20Color,
+                              ),
                             ),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(8.r),
-                            borderSide: BorderSide(
-                              color: ColorValue.primary90Color,
+                            items:
+                            items
+                                .map(
+                                  (item) => DropdownMenuItem<String>(
+                                value: item,
+                                child: Text(
+                                    item,
+                                    style: textTheme.bodyMedium
+                                ),
+                              ),
+                            )
+                                .toList(),
+                            value: selectedValue,
+                            onChanged: (value) {
+                              setState(() {
+                                selectedValue = value;
+                              });
+                            },
+                            buttonStyleData: ButtonStyleData(
+                              padding: EdgeInsets.symmetric(horizontal: 8.h),
+                              decoration: BoxDecoration(
+                                border: Border.all(color: ColorValue.primary90Color, width:1),
+                                borderRadius: BorderRadius.circular(8.r),
+                                color: Colors.white,
+                              ),
+                            ),
+
+                            iconStyleData: IconStyleData(
+                              icon: SvgPicture.asset(
+                                'assets/icons/form_arrow_down.svg',
+                              ),
+                            ),
+                            dropdownStyleData: DropdownStyleData(
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(8.r),
+                                  color: Colors.white,
+                                  border: Border.all(color: ColorValue.primary90Color, width: 1),
+                                ),
+                                padding: EdgeInsets.zero
                             ),
                           ),
                         ),
-                        onChanged: (value) {
-                          String formatted = _formatPhoneNumber(value);
-                          if (formatted != _formNoHpController.text) {
-                            _formNoHpController.value = TextEditingValue(
-                              text: formatted,
-                              selection: TextSelection.collapsed(
-                                offset: formatted.length,
-                              ),
-                            );
-                          }
-                        },
                       ),
+                      SizedBox(height: 16.h),
+                      DropdownButtonHideUnderline(
+                        child: DropdownButtonHideUnderline(
+                          child: DropdownButton2<String>(
+                            isExpanded: true,
+                            hint: Text(
+                              'Pilih Kota/Kabupaten',
+                              style: textTheme.bodyMedium!.copyWith(
+                                color: ColorValue.primary20Color,
+                              ),
+                            ),
+                            items:
+                            items
+                                .map(
+                                  (item) => DropdownMenuItem<String>(
+                                value: item,
+                                child: Text(
+                                    item,
+                                    style: textTheme.bodyMedium
+                                ),
+                              ),
+                            )
+                                .toList(),
+                            value: selectedValue,
+                            onChanged: (value) {
+                              setState(() {
+                                selectedValue = value;
+                              });
+                            },
+                            buttonStyleData: ButtonStyleData(
+                              padding: EdgeInsets.symmetric(horizontal: 8.h),
+                              decoration: BoxDecoration(
+                                border: Border.all(color: ColorValue.primary90Color, width:1),
+                                borderRadius: BorderRadius.circular(8.r),
+                                color: Colors.white,
+                              ),
+                            ),
+
+                            iconStyleData: IconStyleData(
+                              icon: SvgPicture.asset(
+                                'assets/icons/form_arrow_down.svg',
+                              ),
+                            ),
+                            dropdownStyleData: DropdownStyleData(
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(8.r),
+                                  color: Colors.white,
+                                  border: Border.all(color: ColorValue.primary90Color, width: 1),
+                                ),
+                                padding: EdgeInsets.zero
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: 16.h),
+                      DropdownButtonHideUnderline(
+                        child: DropdownButtonHideUnderline(
+                          child: DropdownButton2<String>(
+                            isExpanded: true,
+                            hint: Text(
+                              'Pilih Kecamatan',
+                              style: textTheme.bodyMedium!.copyWith(
+                                color: ColorValue.primary20Color,
+                              ),
+                            ),
+                            items:
+                            items
+                                .map(
+                                  (item) => DropdownMenuItem<String>(
+                                value: item,
+                                child: Text(
+                                    item,
+                                    style: textTheme.bodyMedium
+                                ),
+                              ),
+                            )
+                                .toList(),
+                            value: selectedValue,
+                            onChanged: (value) {
+                              setState(() {
+                                selectedValue = value;
+                              });
+                            },
+                            buttonStyleData: ButtonStyleData(
+                              padding: EdgeInsets.symmetric(horizontal: 8.h),
+                              decoration: BoxDecoration(
+                                border: Border.all(color: ColorValue.primary90Color, width:1),
+                                borderRadius: BorderRadius.circular(8.r),
+                                color: Colors.white,
+                              ),
+                            ),
+
+                            iconStyleData: IconStyleData(
+                              icon: SvgPicture.asset(
+                                'assets/icons/form_arrow_down.svg',
+                              ),
+                            ),
+                            dropdownStyleData: DropdownStyleData(
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(8.r),
+                                  color: Colors.white,
+                                  border: Border.all(color: ColorValue.primary90Color, width: 1),
+                                ),
+                                padding: EdgeInsets.zero
+                            ),
+                          ),
+                        ),
+                      ),
+
                     ],
                   ),
+                  SizedBox(height: 32.h),
+                  CustomButtonWidget(
+                    label: "  Selanjutnya  ",
+                    onPressed: () {
+                      Nav.to(context, PendidikanTerakhirPage());
+                    },
+                  ),
+
                 ],
               ),
             ),

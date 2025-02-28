@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mycareer_new/features/on_boarding/page/on_boarding.dart';
 
 import '../../../core/theme/color_value.dart';
 
@@ -18,7 +19,7 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
       Navigator.pushReplacement(
           context,
           MaterialPageRoute(
-            builder: (context) => const SplashScreenPage(),
+            builder: (context) => const OnBoardingPage(),
           ));
     });
   }
@@ -26,29 +27,21 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ColorValue.primary90Color,
+      backgroundColor: Colors.white,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset('assets/logo.png', height: 185.h, width: 132.w,),
-            SizedBox(height: 30.h),
-            Text(
-              "Basic Shop",
-              style: TextStyle(
-                  fontSize: 25.sp,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: 'Inter',
-                  color: Colors.white),
-              textAlign: TextAlign.center,
+            Container(
+              height: 185.h,
+              width: 185.w,
+
+              decoration: BoxDecoration(
+                color: Colors.grey,
+                shape: BoxShape.circle,
+              ),
             ),
-            SizedBox(height: 10.h),
-            Text(
-              "Fullfill your daily needs",
-              style: TextStyle(
-                  fontSize: 16.sp, fontFamily: 'Inter', color: Colors.white),
-              textAlign: TextAlign.center,
-            ),
+
           ],
         ),
       ),

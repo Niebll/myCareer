@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:mycareer_new/core/custom_widgets/custom_button_widget.dart';
 import 'package:mycareer_new/core/custom_widgets/custom_form_widget.dart';
 import 'package:mycareer_new/core/nav/nav.dart';
 import 'package:mycareer_new/features/auth/page/login/login.dart';
@@ -79,18 +80,21 @@ class _RegisterPageState extends State<RegisterPage> {
                 textEditingController: _confirmPasswordController,
               ),
               SizedBox(height: 32.h,),
-              GestureDetector(
-                onTap: () => Nav.to(context, DataDiriPage()),
-                child: Container(
-                  height: 44.h,
-                  decoration: BoxDecoration(
-                    color: ColorValue.secondary90Color,
-                    borderRadius: BorderRadius.circular(8.r),
+              CustomButtonWidget(label: "Register", onPressed: () {
+                Nav.to(context, DataDiriPage());
+              },),
+              SizedBox(height: 16.h,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text("Sudah punya akun? ", style: textTheme.bodyLarge,),
+                  GestureDetector(
+                    onTap: () {
+                      Nav.to(context, LoginPage());
+                    },
+                    child: Text("Login", style: textTheme.bodyLarge!.copyWith(color: ColorValue.secondary90Color),),
                   ),
-                  child: Center(
-                    child: Text("Register", style: textTheme.labelLarge),
-                  ),
-                ),
+                ],
               ),
             ],
           ),

@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mycareer_new/features/auth/page/login/login.dart';
 import 'package:mycareer_new/features/auth/page/register/register.dart';
 import 'package:mycareer_new/features/on_boarding/page/on_boarding.dart';
+import 'package:mycareer_new/features/splash_screen/page/splash_screen.dart';
 
 import 'core/nav_bar/nav_bar.dart';
 import 'core/theme/app_theme.dart';
@@ -40,7 +41,7 @@ class MyApp extends StatelessWidget {
           home: child,
         );
       },
-      child: const RegisterPage(),
+      child: const SplashScreenPage(),
     );
   }
 }

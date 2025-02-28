@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:mycareer_new/core/nav/nav.dart';
+import 'package:mycareer_new/features/auth/page/login/login.dart';
 import 'package:mycareer_new/features/auth/page/register/data_diri.dart';
 import 'package:mycareer_new/features/home/home.dart';
 import 'package:mycareer_new/features/on_boarding/widgets/on_boarding_content.dart';
@@ -26,11 +28,13 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-      statusBarColor: Colors.transparent, // Transparent status bar
-      statusBarIconBrightness:
-      Brightness.dark, // Dark icons (for light backgrounds)
-    ));
+    SystemChrome.setSystemUIOverlayStyle(
+      const SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent, // Transparent status bar
+        statusBarIconBrightness:
+            Brightness.dark, // Dark icons (for light backgrounds)
+      ),
+    );
 
     return Scaffold(
       body: SafeArea(
@@ -38,15 +42,13 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
           children: [
             SizedBox(
               height: 410.h,
-              width: MediaQuery
-                  .of(context)
-                  .size
-                  .width,
+              width: MediaQuery.of(context).size.width,
               child: PageView.builder(
                 controller: _controller,
                 itemCount: contents.length,
                 physics: NeverScrollableScrollPhysics(),
-                onPageChanged: (index) {  // Tambahkan ini
+                onPageChanged: (index) {
+                  // Tambahkan ini
                   setState(() {
                     _currentPage = index;
                   });
@@ -64,7 +66,6 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                   );
                 },
               ),
-
             ),
             SizedBox(height: 12.h),
             SmoothPageIndicator(
@@ -80,10 +81,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
             Expanded(
               child: Container(
                 padding: EdgeInsets.only(left: 20.w, right: 20.w),
-                width: MediaQuery
-                    .of(context)
-                    .size
-                    .width,
+                width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
                   color: ColorValue.primary90Color,
                   borderRadius: BorderRadius.only(
@@ -110,29 +108,31 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                         },
 
                         itemBuilder: (context, index) {
-                        return Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              contents[index].title,
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 16.sp,
-                                fontWeight: FontWeight.bold,
+                          return Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                contents[index].title,
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16.sp,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
-                            ),
-                            SizedBox(height: 32.h),
-                            Text(
-                              contents[index].desc,
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 14.sp,
-                                fontWeight: FontWeight.w500,
+                              SizedBox(height: 32.h),
+                              Text(
+                                contents[index].desc,
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 14.sp,
+                                  fontWeight: FontWeight.w500,
+                                ),
                               ),
-                            ),
-                          ],
-                        );
-                      },),),
+                            ],
+                          );
+                        },
+                      ),
+                    ),
 
                     Spacer(),
                     Row(
@@ -141,12 +141,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                         GestureDetector(
                           onTap: () {
                             if (_currentPage == 2) {
-                              Navigator.pushReplacement(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => DataDiriPage(),
-                                ),
-                              );
+                              Nav.to(context, LoginPage());
                             } else {
                               _controllerTwo.nextPage(
                                 duration: Duration(milliseconds: 300),
