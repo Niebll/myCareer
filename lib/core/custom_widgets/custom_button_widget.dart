@@ -5,11 +5,13 @@ import 'package:mycareer_new/core/theme/color_value.dart';
 class CustomButtonWidget extends StatefulWidget {
   final String label;
   final Function() onPressed;
+  Color color;
 
-  const CustomButtonWidget({
+  CustomButtonWidget({
     super.key,
     required this.label,
     required this.onPressed,
+    this.color = ColorValue.secondary90Color,
   });
 
   @override
@@ -26,7 +28,7 @@ class _CustomButtonWidgetState extends State<CustomButtonWidget> {
         width: double.infinity,
         height: 44.h,
         decoration: BoxDecoration(
-          color: ColorValue.secondary90Color,
+          color: widget.color,
           borderRadius: BorderRadius.circular(8.r),
         ),
         child: Center(child: Text(widget.label, style: textTheme.labelLarge)),

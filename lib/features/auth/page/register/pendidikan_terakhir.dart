@@ -99,7 +99,7 @@ class _PendidikanTerakhirPageState extends State<PendidikanTerakhirPage> {
                     Row(
                       children: [
                         Text(
-                          "Pilih Lokasi Saat Ini",
+                          "Jenjang Pendidikan",
                           style: textTheme.bodyMedium,
                         ),
                         Text(
@@ -116,7 +116,7 @@ class _PendidikanTerakhirPageState extends State<PendidikanTerakhirPage> {
                         child: DropdownButton2<String>(
                           isExpanded: true,
                           hint: Text(
-                            'Pilih Provinsi',
+                            'Pilih Jenjang Pendidikan',
                             style: textTheme.bodyMedium!.copyWith(
                               color: ColorValue.primary20Color,
                             ),
@@ -224,7 +224,7 @@ class _PendidikanTerakhirPageState extends State<PendidikanTerakhirPage> {
                         color: ColorValue.secondary90Color,
                         width: 2.w,
                       ),
-                      activeColor: ColorValue.primary90Color,
+                      activeColor: ColorValue.secondary90Color,
                       checkColor: Colors.white,
                       materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                     ),
@@ -238,28 +238,33 @@ class _PendidikanTerakhirPageState extends State<PendidikanTerakhirPage> {
               SizedBox(height: 16.h),
               _isGraduated
                   ? SizedBox()
-                  : CustomDatePickerField(
-                    label: "Selesai Pendidikan",
-                    hintText: "Pilih bulan dan tahun",
-                    controller: _startSemesterController,
-                    isMandatory: true,
-                    onTap: () {
-                      _selectDate(context);
-                    },
+                  :
+                  Column(
+                    children: [
+                      CustomDatePickerField(
+                        label: "Selesai Pendidikan",
+                        hintText: "Pilih bulan dan tahun",
+                        controller: _startSemesterController,
+                        isMandatory: true,
+                        onTap: () {
+                          _selectDate(context);
+                        },
+                      ),
+                      SizedBox(height: 16.h),
+                      CustomFormWidget(
+                        label: "Pengalaman Organisasi/Pengembangan Diri",
+                        isDescription: true,
+                        isMandatory: true,
+                        description:
+                        "Jika ada, ceritakan pengalaman organisasi atau pengembangan diri yang pernah kamu lakukan agar rekruter terkesan",
+                        hint: "",
+                        svg: "",
+                        isSvg: false,
+                        maxLines: 8,
+                        textEditingController: _organizationController,
+                      ),
+                    ]
                   ),
-              SizedBox(height: 16.h),
-              CustomFormWidget(
-                label: "Pengalaman Organisasi/Pengembangan Diri",
-                isDescription: true,
-                isMandatory: true,
-                description:
-                    "Jika ada, ceritakan pengalaman organisasi atau pengembangan diri yang pernah kamu lakukan agar rekruter terkesan",
-                hint: "",
-                svg: "",
-                isSvg: false,
-                maxLines: 8,
-                textEditingController: _organizationController,
-              ),
               SizedBox(height: 32.h),
               CustomButtonWidget(label: "Selanjutnya", onPressed: () {
                 Nav.to(context, PengalamanKerjaPage());

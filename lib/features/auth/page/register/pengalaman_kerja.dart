@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:mycareer_new/core/custom_widgets/custom_app_bar_widget.dart';
 import 'package:mycareer_new/core/custom_widgets/custom_button_widget.dart';
+import 'package:mycareer_new/core/custom_widgets/custom_tips_card_widget.dart';
 import 'package:mycareer_new/core/nav/nav.dart';
 import 'package:mycareer_new/core/theme/color_value.dart';
 import 'package:mycareer_new/features/auth/page/register/pengalaman_kerja_detail.dart';
@@ -61,17 +62,7 @@ class _PengalamanKerjaPageState extends State<PengalamanKerjaPage> {
               ),
             ),
             SizedBox(height: 16.h),
-            Container(
-              width: double.infinity,
-              padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 12.h),
-              decoration: BoxDecoration(
-                color: ColorValue.secondary20Color,
-                borderRadius: BorderRadius.circular(8.r),
-              ),
-              child: Center(child: Text('Tips : Kamu bisa melewati halaman ini jika belum memiliki pengalaman kerja ', style: textTheme.bodyMedium
-
-              )),
-            ),
+            CustomTipsCardWidget(text: "Tips : Kamu bisa melewati halaman ini jika belum memiliki pengalaman kerja"),
             Spacer(),
             CustomButtonWidget(label: "Selanjutnya", onPressed: () {}),
             SizedBox(height: 16.h),

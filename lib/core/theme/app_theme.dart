@@ -52,7 +52,7 @@ class AppThemeData {
           backgroundColor: ColorValue.primary90Color,
           minimumSize: Size(double.infinity, 50.h),
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(7.5.r),
+            borderRadius: BorderRadius.circular(8.r),
           ),
           textStyle: GoogleFonts.poppins(
             color: Colors.white,
@@ -110,6 +110,12 @@ class AppThemeData {
           borderRadius: BorderRadius.circular(8.r),
         ),
         errorBorder: OutlineInputBorder(
+          borderSide: BorderSide(color: ColorValue.primary90Color),
+          borderRadius: BorderRadius.circular(8.r),
+        ),
+        activeIndicatorBorder: BorderSide(color: ColorValue.primary90Color),
+        outlineBorder: BorderSide(color: ColorValue.primary90Color),
+        focusedErrorBorder: OutlineInputBorder(
           borderSide: BorderSide(color: ColorValue.primary90Color),
           borderRadius: BorderRadius.circular(8.r),
         ),

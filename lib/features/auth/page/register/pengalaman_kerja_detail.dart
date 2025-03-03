@@ -3,6 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mycareer_new/core/custom_widgets/custom_app_bar_widget.dart';
 import 'package:mycareer_new/core/custom_widgets/custom_date_picker_widget.dart';
 import 'package:mycareer_new/core/custom_widgets/custom_form_widget.dart';
+import 'package:mycareer_new/core/nav/nav.dart';
+import 'package:mycareer_new/features/auth/page/register/bidang_kerja.dart';
 
 import '../../../../core/custom_widgets/custom_button_widget.dart';
 
@@ -18,7 +20,43 @@ class _PengalamanKerjaDetailPageState extends State<PengalamanKerjaDetailPage> {
   final TextEditingController _workPlaceController = TextEditingController();
   final TextEditingController _positionController = TextEditingController();
   final TextEditingController _deskripsiController = TextEditingController();
+  final TextEditingController _startPeriodController = TextEditingController();
+  final TextEditingController _endPeriodController = TextEditingController();
 
+
+
+  //make void function for date picker
+  void _showDateStart() {
+    showDatePicker(
+      context: context,
+      initialDate: DateTime.now(),
+      firstDate: DateTime(2000),
+      lastDate: DateTime.now(),
+    ).then((pickedDate) {
+      if (pickedDate == null) {
+        return;
+      }
+      setState(() {
+        _startPeriodController.text = pickedDate.toString();
+      });
+    });
+  }
+
+  void _showDateEnd() {
+    showDatePicker(
+      context: context,
+      initialDate: DateTime.now(),
+      firstDate: DateTime(2000),
+      lastDate: DateTime.now(),
+    ).then((pickedDate) {
+      if (pickedDate == null) {
+        return;
+      }
+      setState(() {
+        _endPeriodController.text = pickedDate.toString();
+      });
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,8 +91,10 @@ class _PengalamanKerjaDetailPageState extends State<PengalamanKerjaDetailPage> {
                     child: CustomDatePickerField(
                       label: "Periode Mulai",
                       hintText: "Pilih tanggal",
-                      controller: TextEditingController(),
-                      onTap: () {},
+                      controller: _startPeriodController,
+                      onTap: () {
+                        _showDateStart();
+                      },
                       isMandatory: true,
                     ),
                   ),
@@ -63,8 +103,10 @@ class _PengalamanKerjaDetailPageState extends State<PengalamanKerjaDetailPage> {
                     child: CustomDatePickerField(
                       label: "Periode Akhir",
                       hintText: "Pilih tanggal",
-                      controller: TextEditingController(),
-                      onTap: () {},
+                      controller: _endPeriodController,
+                      onTap: () {
+                        _showDateEnd();
+                      },
                       isMandatory: true,
                     ),
                   ),
@@ -81,10 +123,12 @@ class _PengalamanKerjaDetailPageState extends State<PengalamanKerjaDetailPage> {
                 isDescription: true,
                 description: "Ceritakan pengalamanmu selama kamu bekerja",
               ),
-              SizedBox(height: 80.h),
+              SizedBox(height: 110.h),
               CustomButtonWidget(
-                label: "Simpan",
-                onPressed: () {},
+                label: "Selanjutnya",
+                onPressed: () {
+                  Nav.to(context, BidangKerjaPage());
+                },
               ),
             ],
           ),

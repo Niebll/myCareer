@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mycareer_new/features/auth/page/login/login.dart';
+import 'package:mycareer_new/features/auth/page/register/pengalaman_kerja_detail.dart';
 import 'package:mycareer_new/features/auth/page/register/register.dart';
+import 'package:mycareer_new/features/auth/page/register/upload_cv.dart';
 import 'package:mycareer_new/features/on_boarding/page/on_boarding.dart';
 import 'package:mycareer_new/features/splash_screen/page/splash_screen.dart';
 
@@ -12,10 +14,12 @@ import 'core/theme/app_theme.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   // Mengatur status bar agar transparan
-  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-    statusBarColor: Colors.transparent, // Status bar transparan
-    statusBarIconBrightness: Brightness.dark, // Icon status bar gelap
-  ));
+  SystemChrome.setSystemUIOverlayStyle(
+    SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent, // Status bar transparan
+      statusBarIconBrightness: Brightness.dark, // Icon status bar gelap
+    ),
+  );
 
   runApp(const MyApp());
 }
@@ -41,7 +45,7 @@ class MyApp extends StatelessWidget {
           home: child,
         );
       },
-      child: const SplashScreenPage(),
+      child: UploadCvPage(),
     );
   }
 }
