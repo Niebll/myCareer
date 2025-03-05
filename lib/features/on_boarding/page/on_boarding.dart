@@ -21,13 +21,10 @@ class OnBoardingPage extends StatefulWidget {
 }
 
 class _OnBoardingPageState extends State<OnBoardingPage> {
-  final _controller = PageController();
-  final _controllerTwo = PageController();
-  int _currentPage = 0;
-  List colors = [Colors.white, Colors.white, Colors.white];
-
   @override
-  Widget build(BuildContext context) {
+  void initState() {
+    // TODO: implement initState
+    super.initState();
     SystemChrome.setSystemUIOverlayStyle(
       const SystemUiOverlayStyle(
         statusBarColor: Colors.transparent, // Transparent status bar
@@ -35,7 +32,15 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
             Brightness.dark, // Dark icons (for light backgrounds)
       ),
     );
+  }
 
+  final _controller = PageController();
+  final _controllerTwo = PageController();
+  int _currentPage = 0;
+  List colors = [Colors.white, Colors.white, Colors.white];
+
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
         child: Column(

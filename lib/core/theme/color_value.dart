@@ -8,7 +8,8 @@ class ColorValue {
   static const Color secondary20Color = Color(0XFFFFF9EB);
   static const Color netralColor = Color(0XFF333333);
   static const Color redColor = Color(0XFFE91919);
-  static const Color dangerColor = Color(0XFFFF4530);
+  static const Color greenHueColor = Color(0XFF35A000);
+  static const Color greenTintColor = Color(0XFFD7FFC3);
   static const Color successColor = Color(0XFF28A745);
   static const Color alertColor = Color(0XFFFFC107);
 }
