@@ -4,9 +4,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:mycareer_new/core/custom_widgets/custom_search_field_widget.dart';
 import 'package:mycareer_new/core/custom_widgets/custom_text_bar_widget.dart';
+import 'package:mycareer_new/core/nav/nav.dart';
 import 'package:mycareer_new/core/theme/color_value.dart';
 import 'package:mycareer_new/features/home/widgets/home_job_trend_box_widget.dart';
 import 'package:mycareer_new/features/home/widgets/home_reccomend_box_widget.dart';
+import 'package:mycareer_new/features/skill_quest/view/page/skill_quest.dart';
 import 'package:mycareer_new/features/skill_quest/view/widget/online_course_detail_card_widget.dart';
 
 class HomePage extends StatefulWidget {
@@ -87,7 +89,11 @@ class _HomePageState extends State<HomePage> {
                                   "Career Counsel",
                                   "box_career_counsel.svg",
                                 ),
-                                _buildBar("Skill Quest", "box_skill_quest.svg"),
+                                GestureDetector(
+                                    onTap: () {
+                                      Nav.to(context, SkillQuestPage());
+                                    },
+                                    child: _buildBar("Skill Quest", "box_skill_quest.svg")),
                                 _buildBar("Scholar", "box_scholar.svg"),
                                 _buildBar("Job Pulse", "box_job_pulse.svg"),
                               ],
