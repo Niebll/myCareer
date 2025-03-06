@@ -10,6 +10,8 @@ class ColorValue {
   static const Color redColor = Color(0XFFE91919);
   static const Color greenHueColor = Color(0XFF35A000);
   static const Color greenTintColor = Color(0XFFD7FFC3);
-  static const Color successColor = Color(0XFF28A745);
+  static Color bgNavColor = Color(0XFFD8D8D8).withOpacity(0.4);
+  static Color greyColor = Color(0XFF929292);
+
   static const Color alertColor = Color(0XFFFFC107);
 }

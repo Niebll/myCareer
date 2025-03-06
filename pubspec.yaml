@@ -48,6 +48,7 @@ dependencies:
   dropdown_button2: ^2.3.9
   dotted_border: ^2.1.0
   file_picker: ^9.0.2
+  zoom_tap_animation:
 
 dev_dependencies:
   flutter_test:
@@ -78,6 +79,7 @@ flutter:
      - assets/images/on_boarding/
      - assets/images/auth/
      - assets/images/skill_quest/
+     - assets/images/home/
 
   #   - images/a_dot_ham.jpeg
 

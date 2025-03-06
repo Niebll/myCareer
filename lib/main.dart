@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mycareer_new/core/bottom_nav/nav_bar.dart';
 import 'package:mycareer_new/features/auth/page/login/login.dart';
 import 'package:mycareer_new/features/auth/page/register/data_diri.dart';
 import 'package:mycareer_new/features/auth/page/register/pengalaman_kerja_detail.dart';
@@ -12,7 +13,6 @@ import 'package:mycareer_new/features/skill_quest/view/page/skill_quest.dart';
 import 'package:mycareer_new/features/skill_quest/view/widget/bootcamp.dart';
 import 'package:mycareer_new/features/splash_screen/page/splash_screen.dart';
 
-import 'core/nav_bar/nav_bar.dart';
 import 'core/theme/app_theme.dart';
 
 void main() {
@@ -49,7 +49,7 @@ class MyApp extends StatelessWidget {
           home: child,
         );
       },
-      child: SkillQuestPage(),
+      child: BottomNav(),
     );
   }
 }

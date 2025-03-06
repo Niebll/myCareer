@@ -7,7 +7,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:mycareer_new/core/nav/nav.dart';
 import 'package:mycareer_new/features/auth/page/login/login.dart';
 import 'package:mycareer_new/features/auth/page/register/data_diri.dart';
-import 'package:mycareer_new/features/home/home.dart';
+import 'package:mycareer_new/features/home/page/home.dart';
 import 'package:mycareer_new/features/on_boarding/widgets/on_boarding_content.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 

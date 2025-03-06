@@ -10,10 +10,10 @@ class CustomSearchFieldWidget extends StatefulWidget {
 
 
   CustomSearchFieldWidget({
-    Key? key,
+    super.key,
     required this.hint,
     required this.textEditingController,
-  }) : super(key: key);
+  });
 
   @override
   State<CustomSearchFieldWidget> createState() =>
@@ -29,10 +29,11 @@ class _CustomSearchFieldWidgetState extends State<CustomSearchFieldWidget> {
       decoration: InputDecoration(
         contentPadding: EdgeInsets.symmetric(),
         hintText: widget.hint,
+        fillColor: Colors.white,
+        filled: true,
         hintStyle: textTheme.bodyMedium!.copyWith!(
           color: ColorValue.primary20Color,
         ),
-
         prefixIcon: Padding(
           padding: EdgeInsets.all(10.w),
           child: SvgPicture.asset("assets/icons/form_search.svg"),
