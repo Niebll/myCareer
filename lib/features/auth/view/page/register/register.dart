@@ -5,10 +5,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:mycareer_new/core/custom_widgets/custom_button_widget.dart';
 import 'package:mycareer_new/core/custom_widgets/custom_form_widget.dart';
 import 'package:mycareer_new/core/nav/nav.dart';
-import 'package:mycareer_new/features/auth/page/login/login.dart';
-import 'package:mycareer_new/features/auth/page/register/data_diri.dart';
 
-import '../../../../core/theme/color_value.dart';
+import '../../../../../core/theme/color_value.dart';
+import '../login/login.dart';
+import 'data_diri.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({Key? key}) : super(key: key);

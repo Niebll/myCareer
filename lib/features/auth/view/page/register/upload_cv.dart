@@ -8,7 +8,7 @@ import 'package:mycareer_new/core/custom_widgets/custom_app_bar_widget.dart';
 import 'package:mycareer_new/core/custom_widgets/custom_button_widget.dart';
 import 'package:mycareer_new/core/nav/nav.dart';
 import 'package:mycareer_new/core/theme/color_value.dart';
-import 'package:mycareer_new/features/auth/page/register/register_end.dart';
+import 'package:mycareer_new/features/auth/view/page/register/register_end.dart';
 
 class UploadCvPage extends StatefulWidget {
   const UploadCvPage({Key? key}) : super(key: key);

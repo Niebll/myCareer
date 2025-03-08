@@ -4,9 +4,9 @@ import 'package:mycareer_new/core/custom_widgets/custom_app_bar_widget.dart';
 import 'package:mycareer_new/core/custom_widgets/custom_date_picker_widget.dart';
 import 'package:mycareer_new/core/custom_widgets/custom_form_widget.dart';
 import 'package:mycareer_new/core/nav/nav.dart';
-import 'package:mycareer_new/features/auth/page/register/bidang_kerja.dart';
 
-import '../../../../core/custom_widgets/custom_button_widget.dart';
+import '../../../../../core/custom_widgets/custom_button_widget.dart';
+import 'bidang_kerja.dart';
 
 class PengalamanKerjaDetailPage extends StatefulWidget {
   const PengalamanKerjaDetailPage({Key? key}) : super(key: key);

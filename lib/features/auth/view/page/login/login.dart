@@ -6,8 +6,9 @@ import 'package:mycareer_new/core/custom_widgets/custom_button_widget.dart';
 import 'package:mycareer_new/core/custom_widgets/custom_form_widget.dart';
 import 'package:mycareer_new/core/nav/nav.dart';
 import 'package:mycareer_new/core/theme/color_value.dart';
-import 'package:mycareer_new/features/auth/page/register/data_diri.dart';
-import 'package:mycareer_new/features/auth/page/register/register.dart';
+
+import '../register/data_diri.dart';
+import '../register/register.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -88,23 +89,6 @@ class _LoginPageState extends State<LoginPage> {
                 onPressed: () {
                   Nav.to(context, DataDiriPage());
                 },
-              ),
-              SizedBox(height: 16.h),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text("Belum Memiliki Akun?", style: textTheme.bodyLarge),
-                  SizedBox(width: 8.h),
-                  GestureDetector(
-                    onTap: () => Nav.to(context, RegisterPage()),
-                    child: Text(
-                      "Register",
-                      style: textTheme.bodyLarge!.copyWith!(
-                        color: ColorValue.secondary90Color,
-                      ),
-                    ),
-                  ),
-                ],
               ),
             ],
           ),

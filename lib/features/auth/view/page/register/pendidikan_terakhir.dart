@@ -11,9 +11,9 @@ import 'package:mycareer_new/core/custom_widgets/custom_button_widget.dart';
 import 'package:mycareer_new/core/custom_widgets/custom_date_picker_widget.dart';
 import 'package:mycareer_new/core/custom_widgets/custom_form_widget.dart';
 import 'package:mycareer_new/core/nav/nav.dart';
-import 'package:mycareer_new/features/auth/page/register/pengalaman_kerja.dart';
+import 'package:mycareer_new/features/auth/view/page/register/pengalaman_kerja.dart';
 
-import '../../../../core/theme/color_value.dart';
+import '../../../../../core/theme/color_value.dart';
 
 class PendidikanTerakhirPage extends StatefulWidget {
   const PendidikanTerakhirPage({Key? key}) : super(key: key);

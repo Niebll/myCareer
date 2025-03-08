@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../core/theme/color_value.dart';
+import '../../../../core/theme/color_value.dart';
+
 
 class CustomProgressBarRegisterWidget extends StatefulWidget {
   final int currentStep;

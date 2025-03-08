@@ -6,7 +6,7 @@ import 'package:mycareer_new/core/custom_widgets/custom_button_widget.dart';
 import 'package:mycareer_new/core/custom_widgets/custom_tips_card_widget.dart';
 import 'package:mycareer_new/core/nav/nav.dart';
 import 'package:mycareer_new/core/theme/color_value.dart';
-import 'package:mycareer_new/features/auth/page/register/pengalaman_kerja_detail.dart';
+import 'package:mycareer_new/features/auth/view/page/register/pengalaman_kerja_detail.dart';
 
 class PengalamanKerjaPage extends StatefulWidget {
   const PengalamanKerjaPage({Key? key}) : super(key: key);
