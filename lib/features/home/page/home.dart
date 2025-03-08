@@ -8,11 +8,12 @@ import 'package:mycareer_new/core/nav/nav.dart';
 import 'package:mycareer_new/core/theme/color_value.dart';
 import 'package:mycareer_new/features/home/widgets/home_job_trend_box_widget.dart';
 import 'package:mycareer_new/features/home/widgets/home_reccomend_box_widget.dart';
+import 'package:mycareer_new/features/job_pulse/page/job_pulse.dart';
 import 'package:mycareer_new/features/skill_quest/view/page/skill_quest.dart';
 import 'package:mycareer_new/features/skill_quest/view/widget/online_course_detail_card_widget.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({super.key});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -95,7 +96,11 @@ class _HomePageState extends State<HomePage> {
                                     },
                                     child: _buildBar("Skill Quest", "box_skill_quest.svg")),
                                 _buildBar("Scholar", "box_scholar.svg"),
-                                _buildBar("Job Pulse", "box_job_pulse.svg"),
+                                GestureDetector(
+                                  onTap: () {
+                                    Nav.to(context, JobPulsePage());
+                                  },
+                                    child: _buildBar("Job Pulse", "box_job_pulse.svg")),
                               ],
                             ),
                           ),

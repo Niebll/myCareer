@@ -80,6 +80,7 @@ flutter:
      - assets/images/auth/
      - assets/images/skill_quest/
      - assets/images/home/
+     - assets/images/job_pulse/
 
   #   - images/a_dot_ham.jpeg
 
