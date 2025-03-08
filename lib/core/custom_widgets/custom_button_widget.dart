@@ -6,12 +6,14 @@ class CustomButtonWidget extends StatefulWidget {
   final String label;
   final Function() onPressed;
   Color color;
+  bool isUnderLine;
 
   CustomButtonWidget({
     super.key,
     required this.label,
     required this.onPressed,
     this.color = ColorValue.secondary90Color,
+    this.isUnderLine = false
   });
 
   @override
@@ -31,7 +33,11 @@ class _CustomButtonWidgetState extends State<CustomButtonWidget> {
           color: widget.color,
           borderRadius: BorderRadius.circular(8.r),
         ),
-        child: Center(child: Text(widget.label, style: textTheme.labelLarge)),
+        child: Center(child: Text(widget.label, style: textTheme.labelLarge!.copyWith(
+          decoration: widget.isUnderLine ? TextDecoration.underline : null,
+          decorationColor: Colors.white
+        ),)
+        ),
       ),
     );
   }

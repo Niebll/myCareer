@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mycareer_new/core/bottom_nav/nav_bar.dart';
 import 'package:mycareer_new/core/nav/nav.dart';
 import 'package:mycareer_new/features/job_pulse/page/job_pulse.dart';
+import 'package:mycareer_new/features/job_pulse/page/job_pulse_detail.dart';
 import 'package:mycareer_new/features/on_boarding/page/on_boarding.dart';
 import 'package:mycareer_new/features/skill_quest/view/page/bootcamp_detail.dart';
 import 'package:mycareer_new/features/skill_quest/view/page/skill_quest.dart';
@@ -46,7 +47,7 @@ class MyApp extends StatelessWidget {
           home: child,
         );
       },
-      child: BottomNav(),
+      child: JobPulseDetailPage(),
     );
   }
 }
