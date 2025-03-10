@@ -9,6 +9,8 @@ import 'package:mycareer_new/features/on_boarding/page/on_boarding.dart';
 import 'package:mycareer_new/features/scholar/view/page/scholar.dart';
 import 'package:mycareer_new/features/scholar/view/page/scholar_detail.dart';
 import 'package:mycareer_new/features/skill_quest/view/page/bootcamp_detail.dart';
+import 'package:mycareer_new/features/skill_quest/view/page/bootcamp_detail_paid.dart';
+import 'package:mycareer_new/features/skill_quest/view/page/bootcamp_detail_payment.dart';
 import 'package:mycareer_new/features/skill_quest/view/page/skill_quest.dart';
 import 'package:mycareer_new/features/skill_quest/view/widget/bootcamp.dart';
 import 'package:mycareer_new/features/splash_screen/page/splash_screen.dart';
@@ -49,7 +51,9 @@ class MyApp extends StatelessWidget {
           home: child,
         );
       },
-      child: ScholarDetailPage(),
+      child: BootcampDetailPaidPage(
+
+      ),
     );
   }
 }
