@@ -6,6 +6,8 @@ import 'package:mycareer_new/core/nav/nav.dart';
 import 'package:mycareer_new/features/job_pulse/page/job_pulse.dart';
 import 'package:mycareer_new/features/job_pulse/page/job_pulse_detail.dart';
 import 'package:mycareer_new/features/on_boarding/page/on_boarding.dart';
+import 'package:mycareer_new/features/scholar/view/page/scholar.dart';
+import 'package:mycareer_new/features/scholar/view/page/scholar_detail.dart';
 import 'package:mycareer_new/features/skill_quest/view/page/bootcamp_detail.dart';
 import 'package:mycareer_new/features/skill_quest/view/page/skill_quest.dart';
 import 'package:mycareer_new/features/skill_quest/view/widget/bootcamp.dart';
@@ -47,7 +49,7 @@ class MyApp extends StatelessWidget {
           home: child,
         );
       },
-      child: JobPulseDetailPage(),
+      child: ScholarDetailPage(),
     );
   }
 }
