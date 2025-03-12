@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mycareer_new/core/bottom_nav/nav_bar.dart';
 import 'package:mycareer_new/core/nav/nav.dart';
+import 'package:mycareer_new/features/career_hub/view/page/career_hub.dart';
 import 'package:mycareer_new/features/job_pulse/page/job_pulse.dart';
 import 'package:mycareer_new/features/job_pulse/page/job_pulse_detail.dart';
 import 'package:mycareer_new/features/on_boarding/page/on_boarding.dart';
@@ -60,7 +61,7 @@ class MyApp extends StatelessWidget {
           home: child,
         );
       },
-      child: ProfileUploadPortoPage(),
+      child: CareerHubPage(),
     );
   }
 }

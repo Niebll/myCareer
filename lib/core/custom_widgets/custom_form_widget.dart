@@ -12,11 +12,14 @@ class CustomFormWidget extends StatefulWidget {
 
   //make optional password field
   String description;
+  int minLines;
   int maxLines;
   bool isPassword;
   bool isDescription;
   bool isMandatory;
   bool isSvg;
+  bool isSuffix;
+  String suffixIcon;
 
   CustomFormWidget({
     super.key,
@@ -29,7 +32,10 @@ class CustomFormWidget extends StatefulWidget {
     this.isMandatory = false,
     this.isSvg = true,
     this.description = "",
+    this.minLines = 1,
     this.maxLines = 1,
+    this.isSuffix = false,
+    this.suffixIcon = ""
   });
 
   @override
@@ -70,6 +76,7 @@ class _CustomFormWidgetState extends State<CustomFormWidget> {
         TextFormField(
           controller: widget.textEditingController,
           obscureText: widget.isPassword ? hidePassword : false,
+          minLines: widget.minLines,
           maxLines: widget.maxLines,
           decoration: InputDecoration(
             contentPadding: EdgeInsets.symmetric(
@@ -89,25 +96,32 @@ class _CustomFormWidgetState extends State<CustomFormWidget> {
             )
             : null,
 
-            suffixIcon:
-            widget.isPassword
-                ? IconButton(
-              onPressed: () {
-                setState(() {
-                  hidePassword = !hidePassword;
-                });
-              },
-              icon: Icon(
-                hidePassword
-                    ? Icons.visibility_off
-                    : Icons.visibility,
-                color: ColorValue.primary90Color,
-              ),
-            )
-                : null,
+            suffixIcon: buildSuffixIcon()
           ),
         ),
       ],
     );
+  }
+  Widget? buildSuffixIcon() {
+    if (widget.isSuffix) {
+      if (widget.isPassword) {
+        return IconButton(
+          onPressed: () {
+            setState(() {
+              hidePassword = !hidePassword;
+            });
+          },
+          icon: Icon(
+            hidePassword ? Icons.visibility_off : Icons.visibility,
+            color: ColorValue.primary90Color,
+          ),
+        );
+      }
+      return Padding(
+        padding:  EdgeInsets.all(8.0.w),
+        child: SvgPicture.asset("assets/icons/${widget.suffixIcon}"),
+      ); // Bisa pakai custom icon jika ada
+    }
+    return null;
   }
 }
