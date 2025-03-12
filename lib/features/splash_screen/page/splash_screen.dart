@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:mycareer_new/features/home/page/home.dart';
+import 'package:mycareer_new/features/on_boarding/page/on_boarding.dart';
 import 'package:video_player/video_player.dart';
 
 class SplashScreenPage extends StatefulWidget {
@@ -26,7 +26,7 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
     _controller.addListener(() {
       if (_controller.value.position == _controller.value.duration) {
         Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => HomePage()),
+          MaterialPageRoute(builder: (context) => OnBoardingPage()),
         );
       }
     });

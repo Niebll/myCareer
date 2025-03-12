@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../core/custom_widgets/custom_text_bar_widget.dart';
-import '../../../core/theme/color_value.dart';
+import '../../../../core/custom_widgets/custom_text_bar_widget.dart';
+import '../../../../core/theme/color_value.dart';
 
 class HomeReccomendBoxWidget extends StatelessWidget {
   final String image, title, company, location, jobType, fulltime, salary;

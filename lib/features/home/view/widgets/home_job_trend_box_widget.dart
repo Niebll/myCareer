@@ -7,13 +7,13 @@ class HomeJobTrendBoxWidget extends StatelessWidget {
   final String image, title, desc, date, time;
 
   const HomeJobTrendBoxWidget({
-    Key? key,
+    super.key,
     required this.image,
     required this.title,
     required this.desc,
     required this.date,
     required this.time,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -48,14 +48,17 @@ class HomeJobTrendBoxWidget extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    title,
-                    style: textTheme.bodyLarge,
-                    overflow: TextOverflow.ellipsis,
+                  SizedBox(
+                    width: 236.w,
+                    child: Text(
+                      title,
+                      style: textTheme.bodyLarge,
+                      overflow: TextOverflow.ellipsis,
+                    ),
                   ),
                   SizedBox(height: 8.h),
                   SizedBox(
-                    width: 230.w,
+                    width: 236.w,
                     child: Text(
                       desc,
                       style: textTheme.bodySmall,

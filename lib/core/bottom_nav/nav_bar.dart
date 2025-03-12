@@ -2,11 +2,14 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:mycareer_new/core/nav/nav.dart';
+import 'package:mycareer_new/features/career_hub/view/page/career_hub.dart';
+import 'package:mycareer_new/features/chat_ai/chat_ai.dart';
 import 'package:mycareer_new/features/profile/view/page/profile.dart';
 import 'package:mycareer_new/features/profile/view/page/profile_test.dart';
 import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 
-import '../../features/home/page/home.dart';
+import '../../features/home/view/page/home.dart';
 import '../theme/color_value.dart';
 
 class BottomNav extends StatefulWidget {
@@ -18,17 +21,8 @@ class BottomNav extends StatefulWidget {
   State<BottomNav> createState() => _BottomNavState();
 }
 
-enum _SelectedTab { home, careerHub, interviewAce, profile }
 
 class _BottomNavState extends State<BottomNav> {
-  var _selectedTab = _SelectedTab.home;
-
-  void _handleIndexChanged(int i) {
-    setState(() {
-      _selectedTab = _SelectedTab.values[i];
-    });
-  }
-
   late int selectedItem;
 
   @override
@@ -50,7 +44,7 @@ class _BottomNavState extends State<BottomNav> {
           /// GridView
           IndexedStack(
             index: selectedItem,
-            children: [HomePage(), HomePage(), HomePage(), ProfileTest()],
+            children: [HomePage(), CareerHubPage(), HomePage(), ProfileTest()],
           ),
 
           /// Custom Bottom Navigation Bar
@@ -90,6 +84,26 @@ class _BottomNavState extends State<BottomNav> {
               ],
             ),
           ),
+
+          Positioned(
+              bottom: 74.h,
+              right: 0,
+              child: GestureDetector(
+                onTap: () {
+                  Nav.to(context, ChatAiPage());
+                  },
+                child: Container(
+                  height: 60.h,
+                  width: 60.w,
+                  padding: EdgeInsets.all(15.w),
+                  decoration: BoxDecoration(
+                    color: ColorValue.primary20Color,
+                    shape: BoxShape.circle
+                  ),
+                  child: SvgPicture.asset("assets/icons/button_ai.svg"),
+                ),
+              ),
+          )
         ],
       ),
     );

@@ -5,7 +5,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:mycareer_new/core/nav/nav.dart';
-import 'package:mycareer_new/features/home/page/home.dart';
 import 'package:mycareer_new/features/on_boarding/widgets/on_boarding_content.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 

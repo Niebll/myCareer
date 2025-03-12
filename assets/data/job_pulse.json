@@ -1,0 +1,392 @@
+[
+  {
+    "id": "JP001",
+    "nama_pekerjaan": "Back End Developer",
+    "perusahaan": "TechSolve Indonesia",
+    "lokasi": {
+      "kota": "Jakarta Selatan",
+      "provinsi": "DKI Jakarta",
+      "alamat": "Jl. Kemang Raya No. 45, Kemang, Jakarta Selatan"
+    },
+    "pendidikan": {
+      "minimum": "S1",
+      "jurusan": ["Teknik Informatika", "Ilmu Komputer", "Sistem Informasi"]
+    },
+    "gaji": {
+      "minimum": 12000000,
+      "maksimum": 18000000,
+      "mata_uang": "IDR",
+      "periode": "bulan"
+    },
+    "tipe_pekerjaan": "Full-time",
+    "jenis_kelamin": "Semua gender",
+    "usia": {
+      "minimum": 21,
+      "maksimum": 35
+    },
+    "pengalaman": {
+      "minimum": 2,
+      "satuan": "tahun"
+    },
+    "skill": [
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "MySQL",
+      "REST API",
+      "Docker",
+      "Git"
+    ],
+    "deskripsi_pekerjaan": "TechSolve Indonesia sedang mencari Back End Developer yang berpengalaman untuk bergabung dengan tim pengembangan kami. Anda akan bertanggung jawab untuk merancang, mengembangkan, dan memelihara layanan back-end yang mendukung aplikasi web dan mobile kami. Peran ini melibatkan kolaborasi erat dengan front-end developer dan tim produk untuk memastikan pengalaman pengguna yang optimal. Anda akan terlibat dalam seluruh siklus pengembangan, dari perencanaan hingga deployment, serta melakukan optimasi performa dan keamanan aplikasi.",
+    "benefit": [
+      "BPJS Kesehatan dan Ketenagakerjaan",
+      "Asuransi kesehatan tambahan",
+      "Cuti tahunan 14 hari",
+      "Cuti sakit",
+      "Tunjangan transportasi",
+      "Program pengembangan karir",
+      "Bonus tahunan berdasarkan performa"
+    ],
+    "hari_kerja": ["Senin", "Selatan", "Rabu", "Kamis", "Jumat"],
+    "jam_kerja": {
+      "mulai": "09:00",
+      "selesai": "17:00",
+      "timezone": "WIB"
+    },
+    "perusahaan_detail": {
+      "nama": "TechSolve Indonesia",
+      "logo": "https://example.com/logos/techsolve.png",
+      "bidang": "Teknologi Informasi",
+      "deskripsi": "TechSolve Indonesia adalah perusahaan teknologi yang berfokus pada pengembangan solusi digital inovatif untuk berbagai industri. Didirikan pada tahun 2015, perusahaan kami telah berkembang pesat dan kini bekerja sama dengan berbagai klien nasional dan internasional. Kami berkomitmen untuk menciptakan lingkungan kerja yang inklusif dan mendukung perkembangan karir karyawan kami."
+    },
+    "link_rekrutmen": "https://techsolve.id/karir/back-end-developer",
+    "tanggal_posting": "2025-03-01",
+    "tanggal_tutup": "2025-03-31"
+  },
+  {
+    "id": "JP002",
+    "nama_pekerjaan": "Front End Developer",
+    "perusahaan": "Digital Kreasi",
+    "lokasi": {
+      "kota": "Bandung",
+      "provinsi": "Jawa Barat",
+      "alamat": "Jl. Dipatiukur No. 112, Bandung"
+    },
+    "pendidikan": {
+      "minimum": "Diploma/S1",
+      "jurusan": ["Teknik Informatika", "Desain Komunikasi Visual", "Multimedia"]
+    },
+    "gaji": {
+      "minimum": 8000000,
+      "maksimum": 15000000,
+      "mata_uang": "IDR",
+      "periode": "bulan"
+    },
+    "tipe_pekerjaan": "Full-time",
+    "jenis_kelamin": "Semua gender",
+    "usia": {
+      "minimum": 20,
+      "maksimum": 32
+    },
+    "pengalaman": {
+      "minimum": 1,
+      "satuan": "tahun"
+    },
+    "skill": [
+      "React.js",
+      "JavaScript",
+      "HTML5",
+      "CSS3",
+      "Tailwind CSS",
+      "Responsive Design",
+      "Version Control/Git"
+    ],
+    "deskripsi_pekerjaan": "Sebagai Front End Developer di Digital Kreasi, Anda akan bertanggung jawab untuk mengimplementasikan desain visual ke dalam kode yang berfungsi dan responsif. Anda akan bekerja sama dengan tim desain UI/UX dan back-end developer untuk menciptakan pengalaman pengguna yang menarik dan intuitif. Tugas utama termasuk mengembangkan antarmuka pengguna yang responsif, mengoptimalkan aplikasi untuk kecepatan dan skalabilitas, serta memastikan kompatibilitas lintas browser. Kami mencari individu yang kreatif, detail-oriented, dan mampu menerjemahkan kebutuhan bisnis menjadi solusi teknis yang elegan.",
+    "benefit": [
+      "BPJS Kesehatan dan Ketenagakerjaan",
+      "Cuti tahunan 12 hari",
+      "Cuti sakit",
+      "Work from home 1 hari per minggu",
+      "Program pelatihan dan sertifikasi",
+      "Ruang kerja yang nyaman"
+    ],
+    "hari_kerja": ["Senin", "Selatan", "Rabu", "Kamis", "Jumat"],
+    "jam_kerja": {
+      "mulai": "08:30",
+      "selesai": "17:00",
+      "timezone": "WIB"
+    },
+    "perusahaan_detail": {
+      "nama": "Digital Kreasi",
+      "logo": "https://example.com/logos/digitalkreasi.png",
+      "bidang": "Digital Agency",
+      "deskripsi": "Digital Kreasi adalah agensi digital full-service yang berkomitmen untuk membantu bisnis berkembang di era digital. Kami menyediakan layanan pengembangan web, mobile app, branding, dan digital marketing. Dengan tim yang terdiri dari profesional kreatif dan teknis terbaik, kami telah membantu lebih dari 200 klien mencapai tujuan digital mereka."
+    },
+    "link_rekrutmen": "https://digitalkreasi.com/karir/frontend-dev",
+    "tanggal_posting": "2025-02-25",
+    "tanggal_tutup": "2025-03-25"
+  },
+  {
+    "id": "JP003",
+    "nama_pekerjaan": "AI Engineer",
+    "perusahaan": "DataPintar",
+    "lokasi": {
+      "kota": "Jakarta Pusat",
+      "provinsi": "DKI Jakarta",
+      "alamat": "Menara Kadin Indonesia Lt. 27, Jl. H.R. Rasuna Said X-5 Kav. 2-3"
+    },
+    "pendidikan": {
+      "minimum": "S1/S2",
+      "jurusan": ["Teknik Informatika", "Ilmu Komputer", "Matematika", "Statistik", "Data Science"]
+    },
+    "gaji": {
+      "minimum": 20000000,
+      "maksimum": 35000000,
+      "mata_uang": "IDR",
+      "periode": "bulan"
+    },
+    "tipe_pekerjaan": "Full-time",
+    "jenis_kelamin": "Semua gender",
+    "usia": {
+      "minimum": 23,
+      "maksimum": 40
+    },
+    "pengalaman": {
+      "minimum": 3,
+      "satuan": "tahun"
+    },
+    "skill": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Machine Learning",
+      "Deep Learning",
+      "NLP",
+      "Computer Vision",
+      "Cloud Services (AWS/GCP)"
+    ],
+    "deskripsi_pekerjaan": "DataPintar sedang mencari AI Engineer yang berbakat untuk membantu kami mengembangkan solusi kecerdasan buatan inovatif bagi klien-klien kami. Dalam peran ini, Anda akan merancang, mengembangkan, dan menerapkan algoritma machine learning dan deep learning untuk mengatasi tantangan bisnis kompleks. Anda akan bekerja dengan dataset besar dan mengembangkan model yang dapat diskalakan serta diterapkan dalam produksi. Tanggung jawab utama termasuk membangun pipeline data, melatih dan mengevaluasi model AI, mengoptimalkan algoritma, serta berkolaborasi dengan tim data science dan engineering untuk mengintegrasikan solusi AI ke dalam produk.",
+    "benefit": [
+      "BPJS Kesehatan dan Ketenagakerjaan",
+      "Asuransi kesehatan internasional",
+      "Cuti tahunan 16 hari",
+      "Cuti sakit",
+      "Tunjangan pendidikan dan pengembangan",
+      "Flexible working hours",
+      "Remote work option 2 hari per minggu",
+      "Gym membership"
+    ],
+    "hari_kerja": ["Senin", "Selatan", "Rabu", "Kamis", "Jumat"],
+    "jam_kerja": {
+      "mulai": "09:00",
+      "selesai": "18:00",
+      "timezone": "WIB"
+    },
+    "perusahaan_detail": {
+      "nama": "DataPintar",
+      "logo": "https://example.com/logos/datapintar.png",
+      "bidang": "Artificial Intelligence & Data Science",
+      "deskripsi": "DataPintar adalah perusahaan AI terkemuka di Indonesia yang berfokus pada pengembangan solusi cerdas berbasis data. Berdiri sejak 2018, kami telah membantu berbagai industri termasuk finansial, telekomunikasi, dan ritel dalam transformasi digital mereka menggunakan kecerdasan buatan. Kami memiliki tim ahli dari berbagai disiplin ilmu yang berkomitmen untuk menciptakan solusi AI yang dapat membawa dampak positif bagi bisnis dan masyarakat."
+    },
+    "link_rekrutmen": "https://datapintar.co.id/careers/ai-engineer",
+    "tanggal_posting": "2025-03-05",
+    "tanggal_tutup": "2025-04-05"
+  },
+  {
+    "id": "JP004",
+    "nama_pekerjaan": "Data Analyst",
+    "perusahaan": "FinGenius",
+    "lokasi": {
+      "kota": "Surabaya",
+      "provinsi": "Jawa Timur",
+      "alamat": "Spazio Building Lt. 5, Jl. Mayjen Yono Suwoyo Kav. 3, Surabaya"
+    },
+    "pendidikan": {
+      "minimum": "S1",
+      "jurusan": ["Statistik", "Matematika", "Ekonomi", "Teknik Informatika", "Sistem Informasi"]
+    },
+    "gaji": {
+      "minimum": 9000000,
+      "maksimum": 15000000,
+      "mata_uang": "IDR",
+      "periode": "bulan"
+    },
+    "tipe_pekerjaan": "Full-time",
+    "jenis_kelamin": "Semua gender",
+    "usia": {
+      "minimum": 22,
+      "maksimum": 35
+    },
+    "pengalaman": {
+      "minimum": 2,
+      "satuan": "tahun"
+    },
+    "skill": [
+      "SQL",
+      "Python",
+      "R",
+      "Data Visualization (Tableau/Power BI)",
+      "Excel Advanced",
+      "Statistical Analysis",
+      "Data Cleaning"
+    ],
+    "deskripsi_pekerjaan": "FinGenius, perusahaan fintech terkemuka di Indonesia, mencari Data Analyst yang berpengalaman untuk membantu kami mengoptimalkan produk dan layanan kami berbasis analisis data. Sebagai Data Analyst, Anda akan bertanggung jawab untuk mengumpulkan, menyusun, dan menganalisis data dari berbagai sumber, mengidentifikasi pola dan tren, serta menyajikan insight kepada stakeholder dalam format yang mudah dipahami. Anda akan bekerja sama dengan tim produk, pemasaran, dan eksekutif untuk mendorong keputusan bisnis berbasis data. Ini adalah kesempatan untuk bergabung dengan perusahaan yang sedang berkembang pesat dan membuat dampak nyata melalui analisis data yang mendalam.",
+    "benefit": [
+      "BPJS Kesehatan dan Ketenagakerjaan",
+      "Asuransi kesehatan tambahan",
+      "Cuti tahunan 12 hari",
+      "Cuti sakit",
+      "Program pelatihan dan sertifikasi",
+      "Tunjangan makan",
+      "Bonus performance"
+    ],
+    "hari_kerja": ["Senin", "Selatan", "Rabu", "Kamis", "Jumat"],
+    "jam_kerja": {
+      "mulai": "08:30",
+      "selesai": "17:30",
+      "timezone": "WIB"
+    },
+    "perusahaan_detail": {
+      "nama": "FinGenius",
+      "logo": "https://example.com/logos/fingenius.png",
+      "bidang": "Financial Technology",
+      "deskripsi": "FinGenius adalah startup fintech yang berfokus pada penyediaan layanan keuangan inovatif untuk masyarakat Indonesia. Didirikan pada tahun 2020, kami telah berkembang menjadi salah satu pemain utama dalam industri fintech dengan lebih dari 500.000 pengguna aktif. Kami berkomitmen untuk meningkatkan inklusi keuangan melalui teknologi dan memberikan pengalaman keuangan yang lebih baik bagi pengguna kami."
+    },
+    "link_rekrutmen": "https://fingenius.id/karir/data-analyst",
+    "tanggal_posting": "2025-02-20",
+    "tanggal_tutup": "2025-03-20"
+  },
+  {
+    "id": "JP005",
+    "nama_pekerjaan": "UI/UX Designer",
+    "perusahaan": "CreativeWorks",
+    "lokasi": {
+      "kota": "Yogyakarta",
+      "provinsi": "DI Yogyakarta",
+      "alamat": "Jl. Kaliurang Km. 7, Sleman, Yogyakarta"
+    },
+    "pendidikan": {
+      "minimum": "Diploma/S1",
+      "jurusan": ["Desain Komunikasi Visual", "Desain Produk", "Desain Interaksi", "Multimedia"]
+    },
+    "gaji": {
+      "minimum": 7000000,
+      "maksimum": 13000000,
+      "mata_uang": "IDR",
+      "periode": "bulan"
+    },
+    "tipe_pekerjaan": "Full-time",
+    "jenis_kelamin": "Semua gender",
+    "usia": {
+      "minimum": 20,
+      "maksimum": 35
+    },
+    "pengalaman": {
+      "minimum": 1,
+      "satuan": "tahun"
+    },
+    "skill": [
+      "Figma",
+      "Adobe XD",
+      "Sketch",
+      "UI Design",
+      "UX Research",
+      "Wireframing",
+      "Prototyping",
+      "User Testing"
+    ],
+    "deskripsi_pekerjaan": "CreativeWorks mencari UI/UX Designer berbakat untuk bergabung dengan tim kreatif kami. Dalam peran ini, Anda akan merancang antarmuka pengguna yang menarik, fungsional, dan intuitif untuk berbagai platform digital. Anda akan bertanggung jawab untuk memahami kebutuhan pengguna, membuat wireframe, desain visual, dan prototipe interaktif, serta melakukan usability testing. Kami mencari individu yang memiliki pemahaman mendalam tentang desain berpusat pada pengguna, tren desain terkini, dan mampu menerjemahkan kebutuhan bisnis menjadi pengalaman pengguna yang luar biasa. Kreativitas, kemampuan problem-solving, dan keterampilan komunikasi yang baik sangat penting untuk kesuksesan dalam peran ini.",
+    "benefit": [
+      "BPJS Kesehatan dan Ketenagakerjaan",
+      "Cuti tahunan 12 hari",
+      "Cuti sakit",
+      "Lingkungan kerja kreatif",
+      "Flexible working hours",
+      "Akses ke software dan alat desain premium",
+      "Program mentorship"
+    ],
+    "hari_kerja": ["Senin", "Selatan", "Rabu", "Kamis", "Jumat"],
+    "jam_kerja": {
+      "mulai": "09:00",
+      "selesai": "17:00",
+      "timezone": "WIB"
+    },
+    "perusahaan_detail": {
+      "nama": "CreativeWorks",
+      "logo": "https://example.com/logos/creativeworks.png",
+      "bidang": "Digital Creative Agency",
+      "deskripsi": "CreativeWorks adalah agensi kreatif digital yang berfokus pada user experience dan desain interaksi. Didirikan oleh sekelompok desainer dan engineer di Yogyakarta pada tahun 2017, kami telah berevolusi menjadi tim multidisiplin yang menangani proyek desain dan pengembangan untuk klien lokal maupun internasional. Kami percaya bahwa desain yang baik adalah desain yang memecahkan masalah nyata bagi pengguna sambil mencapai tujuan bisnis klien kami."
+    },
+    "link_rekrutmen": "https://creativeworks.co.id/career/uiux-designer",
+    "tanggal_posting": "2025-03-07",
+    "tanggal_tutup": "2025-04-07"
+  },
+  {
+    "id": "JP006",
+    "nama_pekerjaan": "AI Research Scientist",
+    "perusahaan": "InnovateLab",
+    "lokasi": {
+      "kota": "Jakarta Selatan",
+      "provinsi": "DKI Jakarta",
+      "alamat": "The City Tower Lt. 15, Jl. M.H. Thamrin No. 81, Jakarta Pusat"
+    },
+    "pendidikan": {
+      "minimum": "S2/S3",
+      "jurusan": ["Ilmu Komputer", "Kecerdasan Buatan", "Machine Learning", "Ilmu Data", "Matematika Terapan"]
+    },
+    "gaji": {
+      "minimum": 30000000,
+      "maksimum": 50000000,
+      "mata_uang": "IDR",
+      "periode": "bulan"
+    },
+    "tipe_pekerjaan": "Full-time",
+    "jenis_kelamin": "Semua gender",
+    "usia": {
+      "minimum": 25,
+      "maksimum": 45
+    },
+    "pengalaman": {
+      "minimum": 3,
+      "satuan": "tahun"
+    },
+    "skill": [
+      "Python",
+      "TensorFlow/PyTorch",
+      "Machine Learning",
+      "Deep Learning",
+      "Reinforcement Learning",
+      "Computer Vision",
+      "Natural Language Processing",
+      "Publikasi ilmiah"
+    ],
+    "deskripsi_pekerjaan": "InnovateLab mencari AI Research Scientist untuk memimpin riset dan pengembangan di bidang kecerdasan buatan. Sebagai peneliti di laboratorium AI kami, Anda akan meneliti metode dan algoritma baru di bidang machine learning, mengembangkan prototipe produk berbasis AI, serta berkontribusi pada publikasi penelitian internasional. Posisi ini memberikan kesempatan untuk bekerja pada proyek-proyek cutting-edge dengan akses ke infrastruktur komputasi kelas dunia. Anda akan berkolaborasi dengan tim multidisiplin dari berbagai latar belakang untuk memajukan state-of-the-art dalam AI dan machine learning serta menerapkannya untuk menyelesaikan masalah dunia nyata yang kompleks.",
+    "benefit": [
+      "BPJS Kesehatan dan Ketenagakerjaan",
+      "Asuransi kesehatan internasional",
+      "Cuti tahunan 21 hari",
+      "Cuti sakit",
+      "Tunjangan relokasi",
+      "Dana penelitian",
+      "Kesempatan publikasi dan konferensi internasional",
+      "Lingkungan kerja fleksibel",
+      "Program sabbatical"
+    ],
+    "hari_kerja": ["Senin", "Selatan", "Rabu", "Kamis", "Jumat"],
+    "jam_kerja": {
+      "mulai": "09:00",
+      "selesai": "18:00",
+      "timezone": "WIB",
+      "fleksibel": true
+    },
+    "perusahaan_detail": {
+      "nama": "InnovateLab",
+      "logo": "https://example.com/logos/innovatelab.png",
+      "bidang": "Research & Development - Artificial Intelligence",
+      "deskripsi": "InnovateLab adalah laboratorium penelitian AI terkemuka yang didedikasikan untuk memajukan ilmu pengetahuan dan teknologi di bidang kecerdasan buatan. Didirikan pada tahun 2019 sebagai usaha patungan antara investor teknologi dan akademisi terkemuka, kami menggabungkan riset akademis dengan aplikasi industri untuk menciptakan solusi AI yang inovatif dan bertanggung jawab. Kami memiliki fasilitas komputasi high-performance dan bekerja sama dengan universitas dan perusahaan teknologi terkemuka di dunia."
+    },
+    "link_rekrutmen": "https://innovatelab.id/careers/ai-research-scientist",
+    "tanggal_posting": "2025-02-28",
+    "tanggal_tutup": "2025-04-15"
+  }
+]
