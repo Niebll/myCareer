@@ -9,6 +9,7 @@ import 'package:mycareer_new/core/theme/color_value.dart';
 import 'package:mycareer_new/features/home/widgets/home_job_trend_box_widget.dart';
 import 'package:mycareer_new/features/home/widgets/home_reccomend_box_widget.dart';
 import 'package:mycareer_new/features/job_pulse/page/job_pulse.dart';
+import 'package:mycareer_new/features/scholar/view/page/scholar.dart';
 import 'package:mycareer_new/features/skill_quest/view/page/skill_quest.dart';
 import 'package:mycareer_new/features/skill_quest/view/widget/online_course_detail_card_widget.dart';
 
@@ -86,16 +87,24 @@ class _HomePageState extends State<HomePage> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                _buildBar(
-                                  "Career Counsel",
-                                  "box_career_counsel.svg",
+                                GestureDetector(
+                                  onTap:(){
+                                  },
+                                  child: _buildBar(
+                                    "Career Counsel",
+                                    "box_career_counsel.svg",
+                                  ),
                                 ),
                                 GestureDetector(
                                     onTap: () {
                                       Nav.to(context, SkillQuestPage());
                                     },
                                     child: _buildBar("Skill Quest", "box_skill_quest.svg")),
-                                _buildBar("Scholar", "box_scholar.svg"),
+                                GestureDetector(
+                                    onTap: () {
+                                      Nav.to(context, ScholarPage());
+                                    },
+                                    child: _buildBar("Scholar", "box_scholar.svg")),
                                 GestureDetector(
                                   onTap: () {
                                     Nav.to(context, JobPulsePage());

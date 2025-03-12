@@ -2,13 +2,17 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:mycareer_new/features/profile/view/page/profile.dart';
+import 'package:mycareer_new/features/profile/view/page/profile_test.dart';
 import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 
 import '../../features/home/page/home.dart';
 import '../theme/color_value.dart';
 
 class BottomNav extends StatefulWidget {
-  const BottomNav({super.key});
+  int index;
+
+  BottomNav({super.key, this.index = 0});
 
   @override
   State<BottomNav> createState() => _BottomNavState();
@@ -25,17 +29,29 @@ class _BottomNavState extends State<BottomNav> {
     });
   }
 
-  int selectedItem = 0;
+  late int selectedItem;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    selectedItem = widget.index;
+
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     TextTheme textTheme = TextTheme.of(context);
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Stack(
         fit: StackFit.expand,
         children: [
           /// GridView
-          IndexedStack(index: selectedItem, children: [HomePage()]),
+          IndexedStack(
+            index: selectedItem,
+            children: [HomePage(), HomePage(), HomePage(), ProfileTest()],
+          ),
 
           /// Custom Bottom Navigation Bar
           Positioned(
@@ -67,10 +83,10 @@ class _BottomNavState extends State<BottomNav> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               mainAxisSize: MainAxisSize.max,
               children: [
-                _buildBNBItem("nav_home","Utama" ,0),
-                _buildBNBItem("nav_career", "CareerHub",1),
-                _buildBNBItem("nav_interview", "InterviewAce",2),
-                _buildBNBItem("nav_profile", "Profil",3),
+                _buildBNBItem("nav_home", "Utama", 0),
+                _buildBNBItem("nav_career", "CareerHub", 1),
+                _buildBNBItem("nav_interview", "InterviewAce", 2),
+                _buildBNBItem("nav_profile", "Profil", 3),
               ],
             ),
           ),
@@ -79,7 +95,7 @@ class _BottomNavState extends State<BottomNav> {
     );
   }
 
-  Widget _buildBNBItem(String icon,String title ,index) {
+  Widget _buildBNBItem(String icon, String title, index) {
     TextTheme textTheme = TextTheme.of(context);
     return ZoomTapAnimation(
       onTap: () {
@@ -92,13 +108,22 @@ class _BottomNavState extends State<BottomNav> {
         children: [
           SvgPicture.asset(
             "assets/icons/$icon.svg",
-            color: selectedItem == index ? ColorValue.primary90Color : ColorValue.greyColor,
+            color:
+                selectedItem == index
+                    ? ColorValue.primary90Color
+                    : ColorValue.greyColor,
             height: 24.h,
             width: 24.w,
           ),
-          Text(title, style: textTheme.bodySmall!.copyWith(
-            color: selectedItem == index ? ColorValue.primary90Color : ColorValue.greyColor,
-          ),)
+          Text(
+            title,
+            style: textTheme.bodySmall!.copyWith(
+              color:
+                  selectedItem == index
+                      ? ColorValue.primary90Color
+                      : ColorValue.greyColor,
+            ),
+          ),
         ],
       ),
     );

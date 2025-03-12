@@ -45,29 +45,6 @@ class _DataDiriPageState extends State<DataDiriPage> {
     }
   }
 
-  String _formatPhoneNumber(String input) {
-    // Menghapus semua karakter kecuali angka
-    String digits = input.replaceAll(RegExp(r'\D'), '');
-
-    // Pastikan angka pertama bukan 0
-    if (digits.startsWith('0')) {
-      digits = digits.substring(1);
-    }
-
-    // Membatasi panjang maksimal 12 angka
-    if (digits.length > 16) {
-      digits = digits.substring(0, 16);
-    }
-
-    // Memformat menjadi xxxx-xxxx-xxxx
-    List<String> parts = [];
-    for (int i = 0; i < digits.length; i += 4) {
-      parts.add(
-        digits.substring(i, i + 4 > digits.length ? digits.length : i + 4),
-      );
-    }
-    return parts.join('-');
-  }
 
   DateTime? _dateTime;
   final TextEditingController _dateController = TextEditingController();

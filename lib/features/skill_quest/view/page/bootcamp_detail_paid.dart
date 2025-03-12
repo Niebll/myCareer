@@ -40,7 +40,9 @@ class _BootcampDetailPaidPageState extends State<BootcampDetailPaidPage> {
                 onPressed: () {
                   Nav.to(context, BootcampDetailPaidPage());
                 },
+                isUnderLine: true,
               ),
+              SizedBox(height: 16.h,)
             ],
           ),
         ),
