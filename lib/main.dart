@@ -61,7 +61,7 @@ class MyApp extends StatelessWidget {
           home: child,
         );
       },
-      child: CareerHubPage(),
+      child: SplashScreenPage(),
     );
   }
 }
