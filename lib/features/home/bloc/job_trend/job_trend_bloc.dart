@@ -18,6 +18,7 @@ class JobTrendBloc extends Bloc<JobTrendEvent, JobTrendState> {
       final List<dynamic> data = json.decode(response);
       final List<JobTrendModel> jobTrends =
       data.map((json) => JobTrendModel.fromJson(json)).toList();
+      print(data);
 
       emit(JobTrendLoaded(jobTrends));
     } catch (e) {

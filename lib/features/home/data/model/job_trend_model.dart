@@ -5,7 +5,7 @@ class JobTrendModel {
   final String judul;
   final String deskripsi;
   final String gambar;
-  final DateTime tanggalTerbit;
+  final String tanggalTerbit;
   final String waktuTerbit;
   final String link;
 
@@ -26,10 +26,8 @@ class JobTrendModel {
       judul: json['judul'] ?? "Tanpa Judul",
       deskripsi: json['deskripsi'] ?? "Deskripsi tidak tersedia",
       gambar: json['gambar'] ?? "default.png",
-      tanggalTerbit: json['tanggalTerbit'] != null
-          ? DateTime.parse(json['tanggalTerbit'])
-          : DateTime.now(),
-      waktuTerbit: json['waktuTerbit'] ?? "00:00",
+      tanggalTerbit: json['tanggal_terbit'] ?? "tes",
+      waktuTerbit: json['waktu_terbit'],
       link: json['link'] ?? "#",
     );
   }
@@ -41,7 +39,7 @@ class JobTrendModel {
       "judul": judul,
       "deskripsi": deskripsi,
       "gambar": gambar,
-      "tanggalTerbit": tanggalTerbit.toIso8601String(),
+      "tanggalTerbit": tanggalTerbit,
       "waktuTerbit": waktuTerbit,
       "link": link,
     };

@@ -311,14 +311,14 @@ class _HomePageState extends State<HomePage> {
                       image: job.gambar.toString(),
                       title: job.judul.toString(),
                       desc: job.deskripsi.toString(),
-                      date:
-                          job.tanggalTerbit.toLocal().toString().split(" ")[0],
+                      date: job.tanggalTerbit.toString(),
                       time: job.waktuTerbit.toString(),
                       linkWeb: job.link,
                     );
                   },
                 );
               } else if (state is JobTrendError) {
+                print(state.message);
                 return Center(
                   child: Text(state.message, style: textTheme.bodyMedium),
                 );
