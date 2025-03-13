@@ -314,6 +314,7 @@ class _HomePageState extends State<HomePage> {
                       date:
                           job.tanggalTerbit.toLocal().toString().split(" ")[0],
                       time: job.waktuTerbit.toString(),
+                      linkWeb: job.link,
                     );
                   },
                 );
