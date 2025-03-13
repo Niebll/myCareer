@@ -40,7 +40,8 @@ class _ChatAiPageState extends State<ChatAiPage> {
                 final message = messages[index];
                 bool isUser = message["isUser"] == "true";
                 return Align(
-                  alignment: isUser ? Alignment.centerRight : Alignment.centerLeft,
+                  alignment:
+                      isUser ? Alignment.centerRight : Alignment.centerLeft,
                   child: Container(
                     margin: EdgeInsets.symmetric(vertical: 8.h),
                     padding: EdgeInsets.all(12.w),
@@ -48,18 +49,26 @@ class _ChatAiPageState extends State<ChatAiPage> {
                       maxWidth: MediaQuery.of(context).size.width * 0.6,
                     ),
                     decoration: BoxDecoration(
-                      color: isUser ? ColorValue.secondary90Color : ColorValue.secondary20Color,
+                      color:
+                          isUser
+                              ? ColorValue.secondary90Color
+                              : ColorValue.secondary20Color,
                       borderRadius: BorderRadius.circular(8.r),
                     ),
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
-                      crossAxisAlignment: CrossAxisAlignment.end, // Pastikan waktu ada di bawah teks
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      // Pastikan waktu ada di bawah teks
                       children: [
-                        Flexible( // Supaya teks bisa wrap kalau panjang
+                        Flexible(
+                          // Supaya teks bisa wrap kalau panjang
                           child: Text(
                             message["text"]!,
                             style: textTheme.bodySmall!.copyWith(
-                              color: isUser ? Colors.white : ColorValue.netralColor,
+                              color:
+                                  isUser
+                                      ? Colors.white
+                                      : ColorValue.netralColor,
                             ),
                           ),
                         ),
@@ -67,14 +76,14 @@ class _ChatAiPageState extends State<ChatAiPage> {
                         Text(
                           message["time"]!,
                           style: textTheme.bodySmall!.copyWith(
-                            color: isUser ? Colors.white : ColorValue.netralColor,
+                            color:
+                                isUser ? Colors.white : ColorValue.netralColor,
                           ),
                         ),
                       ],
                     ),
                   ),
-                )
-                ;
+                );
               },
             ),
           ),
@@ -96,15 +105,18 @@ class _ChatAiPageState extends State<ChatAiPage> {
                       hintStyle: textTheme.bodyMedium!.copyWith!(
                         color: ColorValue.primary20Color,
                       ),
-                      suffixIcon:                 IconButton(
-                        icon: Icon(Icons.send, color: ColorValue.primary90Color),
+                      suffixIcon: IconButton(
+                        icon: Icon(
+                          Icons.send,
+                          color: ColorValue.primary90Color,
+                        ),
                         onPressed: () {
                           if (_controller.text.isNotEmpty) {
                             setState(() {
                               messages.add({
                                 "text": _controller.text,
                                 "time":
-                                "${DateTime.now().hour}:${DateTime.now().minute}",
+                                    "${DateTime.now().hour}:${DateTime.now().minute}",
                                 "isUser": "true",
                               });
                               _controller.clear();
@@ -112,18 +124,13 @@ class _ChatAiPageState extends State<ChatAiPage> {
                           }
                         },
                       ),
-
                     ),
                   ),
                 ),
               ],
             ),
           ),
-          Container(
-            color: Colors.white,
-            height: 32.h,
-            width: double.infinity,
-          )
+          Container(color: Colors.white, height: 32.h, width: double.infinity),
         ],
       ),
     );

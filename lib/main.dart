@@ -10,7 +10,7 @@ import 'package:mycareer_new/features/on_boarding/page/on_boarding.dart';
 import 'package:mycareer_new/features/profile/view/page/profile.dart';
 import 'package:mycareer_new/features/profile/view/page/profile_edit.dart';
 import 'package:mycareer_new/features/profile/view/page/profile_stalker.dart';
-import 'package:mycareer_new/features/profile/view/page/profile_test.dart';
+import 'package:mycareer_new/features/profile/view/page/profile.dart';
 import 'package:mycareer_new/features/profile/view/page/profile_upload_porto.dart';
 import 'package:mycareer_new/features/scholar/view/page/scholar.dart';
 import 'package:mycareer_new/features/scholar/view/page/scholar_detail.dart';

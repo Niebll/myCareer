@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:mycareer_new/core/custom_widgets/custom_app_bar_widget.dart';
 import 'package:mycareer_new/core/theme/color_value.dart';
 import 'package:mycareer_new/features/skill_quest/view/widget/bootcamp.dart';
 
+import '../../../../core/custom_widgets/custom_tab_indicator_secondary.dart';
 import '../widget/online_course.dart';
 
 class SkillQuestPage extends StatefulWidget {
@@ -45,7 +45,7 @@ class _SkillQuestPageState extends State<SkillQuestPage> {
                   color: Colors.white,
                   shadowColor: ColorValue.primary20Color,
                   child: TabBar(
-                    labelStyle: textTheme.labelLarge,
+                    labelStyle: textTheme.labelLarge,indicator: CustomTabIndicatorSecondary(),
                     labelColor: ColorValue.secondary90Color,
                     indicatorColor: ColorValue.secondary90Color,
                     indicatorSize: TabBarIndicatorSize.tab,
@@ -61,6 +61,7 @@ class _SkillQuestPageState extends State<SkillQuestPage> {
           children: [
             Expanded(
               child: TabBarView(
+                physics: NeverScrollableScrollPhysics(),
                 children: [
                   OnlineCourse(),
                   Bootcamp()

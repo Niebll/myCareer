@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:mycareer_new/features/profile/widgets/profile_education_experience_card.dart';
+
+import '../widgets/profile_education_experience_card.dart';
 
 class ProfileEducationExperience extends StatelessWidget {
   const ProfileEducationExperience({Key? key}) : super(key: key);

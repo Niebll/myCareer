@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:mycareer_new/features/profile/widgets/profile_porto_card.dart';
+
+import '../widgets/profile_porto_card.dart';
 
 class ProfilePorto extends StatefulWidget {
   const ProfilePorto({Key? key}) : super(key: key);

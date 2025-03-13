@@ -6,7 +6,7 @@ import 'package:mycareer_new/core/nav/nav.dart';
 import 'package:mycareer_new/features/career_hub/view/page/career_hub.dart';
 import 'package:mycareer_new/features/chat_ai/chat_ai.dart';
 import 'package:mycareer_new/features/profile/view/page/profile.dart';
-import 'package:mycareer_new/features/profile/view/page/profile_test.dart';
+import 'package:mycareer_new/features/profile/view/page/profile.dart';
 import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 
 import '../../features/home/view/page/home.dart';
@@ -44,7 +44,7 @@ class _BottomNavState extends State<BottomNav> {
           /// GridView
           IndexedStack(
             index: selectedItem,
-            children: [HomePage(), CareerHubPage(), HomePage(), ProfileTest()],
+            children: [HomePage(), CareerHubPage(), HomePage(), ProfilePage()],
           ),
 
           /// Custom Bottom Navigation Bar

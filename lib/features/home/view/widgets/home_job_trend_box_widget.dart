@@ -63,7 +63,7 @@ class HomeJobTrendBoxWidget extends StatelessWidget {
                       desc,
                       style: textTheme.bodySmall,
                       overflow: TextOverflow.ellipsis,
-                      maxLines: 3,
+                      maxLines: 4,
                     ),
                   ),
                   SizedBox(height: 8.h),

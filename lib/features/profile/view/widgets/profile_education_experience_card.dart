@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../core/custom_widgets/custom_text_bar_widget.dart';
-import '../../../core/theme/color_value.dart';
+import '../../../../core/custom_widgets/custom_text_bar_widget.dart';
+import '../../../../core/theme/color_value.dart';
 
 class ProfileEducationExperienceCard extends StatelessWidget {
   final String dateStart, dateEnd, education, position;
