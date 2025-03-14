@@ -9,6 +9,7 @@ import 'package:mycareer_new/core/nav/nav.dart';
 import 'package:mycareer_new/core/theme/color_value.dart';
 import 'package:mycareer_new/features/career_counsel/view/page/career_counsel.dart';
 import 'package:mycareer_new/features/job_pulse/page/job_pulse.dart';
+import 'package:mycareer_new/features/job_pulse/page/job_pulse_detail.dart';
 import 'package:mycareer_new/features/scholar/view/page/scholar.dart';
 import 'package:mycareer_new/features/skill_quest/view/page/skill_quest.dart';
 import 'package:mycareer_new/features/skill_quest/view/widget/online_course_detail_card_widget.dart';
@@ -158,14 +159,19 @@ class _HomePageState extends State<HomePage> {
                           itemCount: 3,
                           padding: EdgeInsets.only(left: 16.w),
                           itemBuilder: (context, index) {
-                            return HomeReccomendBoxWidget(
-                              image: "company.png",
-                              title: "Internship UI-UX",
-                              company: "PT Ava Max",
-                              location: "Malang, Indonesia",
-                              jobType: "IT dan Teknologi",
-                              fulltime: "Fulltime",
-                              salary: "1.000.000",
+                            return GestureDetector(
+                              onTap: () {
+                                Nav.to(context, JobPulseDetailPage());
+                              },
+                              child: HomeReccomendBoxWidget(
+                                image: "company.png",
+                                title: "Internship UI-UX",
+                                company: "PT Ava Max",
+                                location: "Malang, Indonesia",
+                                jobType: "IT dan Teknologi",
+                                fulltime: "Fulltime",
+                                salary: "1.000.000",
+                              ),
                             );
                           },
                         ),
