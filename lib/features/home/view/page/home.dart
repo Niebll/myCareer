@@ -67,6 +67,8 @@ class _HomePageState extends State<HomePage> {
                   child: CustomSearchFieldWidget(
                     hint: "Cari Pekerjaan Impianmu",
                     textEditingController: TextEditingController(),
+                    isReadOnly: true,
+                    onTap: () => Nav.to(context, JobPulsePage(isFocus: true,)),
                   ),
                 ),
                 SizedBox(height: 16.h),
