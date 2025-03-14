@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:mycareer_new/core/nav/nav.dart';
 import 'package:mycareer_new/core/theme/color_value.dart';
+import 'package:mycareer_new/features/home/view/page/home.dart';
 
 class RegisterEndPage extends StatefulWidget {
   const RegisterEndPage({Key? key}) : super(key: key);
@@ -53,18 +55,23 @@ class _RegisterEndPageState extends State<RegisterEndPage> {
               ),
             ),
             SizedBox(height: 16.h),
-            Container(
-              width: 48.w,
-              height: 48.h,
-              decoration: BoxDecoration(
-                color: ColorValue.secondary90Color,
-                shape: BoxShape.circle,
-              ),
-              child: Center(
-                child: SvgPicture.asset(
-                  "assets/icons/arrow_right.svg",
-                  width: 20.w,
-                  height: 20.h,
+            GestureDetector(
+              onTap: () {
+                Nav.to(context, HomePage());
+              },
+              child: Container(
+                width: 48.w,
+                height: 48.h,
+                decoration: BoxDecoration(
+                  color: ColorValue.secondary90Color,
+                  shape: BoxShape.circle,
+                ),
+                child: Center(
+                  child: SvgPicture.asset(
+                    "assets/icons/arrow_right.svg",
+                    width: 20.w,
+                    height: 20.h,
+                  ),
                 ),
               ),
             ),

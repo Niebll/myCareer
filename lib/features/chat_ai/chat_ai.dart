@@ -34,7 +34,7 @@ class _ChatAiPageState extends State<ChatAiPage> {
         children: [
           Expanded(
             child: ListView.builder(
-              padding: EdgeInsets.all(16),
+              padding: EdgeInsets.symmetric(horizontal: 16.w),
               itemCount: messages.length,
               itemBuilder: (context, index) {
                 final message = messages[index];
@@ -72,7 +72,7 @@ class _ChatAiPageState extends State<ChatAiPage> {
                             ),
                           ),
                         ),
-                        SizedBox(width: 8), // Jarak antara teks dan waktu
+                        SizedBox(width: 8.w), // Jarak antara teks dan waktu
                         Text(
                           message["time"]!,
                           style: textTheme.bodySmall!.copyWith(
@@ -88,7 +88,7 @@ class _ChatAiPageState extends State<ChatAiPage> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: EdgeInsets.symmetric(horizontal: 16.w),
             child: Row(
               children: [
                 Expanded(

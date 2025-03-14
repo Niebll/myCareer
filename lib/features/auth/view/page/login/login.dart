@@ -70,19 +70,6 @@ class _LoginPageState extends State<LoginPage> {
                 textEditingController: _passwordController,
                 isPassword: true,
               ),
-              SizedBox(height: 8.h),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Text(
-                    "Lupa Password",
-                    style: textTheme.bodyLarge!.copyWith!(
-                      color: ColorValue.secondary90Color,
-                      decoration: TextDecoration.underline,
-                    ),
-                  ),
-                ],
-              ),
               SizedBox(height: 32.h),
               CustomButtonWidget(
                 label: "Login",
@@ -90,6 +77,26 @@ class _LoginPageState extends State<LoginPage> {
                   Nav.to(context, DataDiriPage());
                 },
               ),
+              SizedBox(height: 16.h,),
+              GestureDetector(
+                onTap: () {
+                  Nav.to(context, RegisterPage());
+                },
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("Belum Memiliki Akun?", style: textTheme.bodyLarge,),
+                    SizedBox(width: 8.w,),
+                    Text("Register", style: textTheme.bodyLarge!.copyWith(
+                      color: ColorValue.secondary90Color,
+                    decoration: TextDecoration.underline,
+                      decorationColor: ColorValue.secondary90Color
+                    ),
+
+                    )
+                  ],
+                ),
+              )
             ],
           ),
         ),

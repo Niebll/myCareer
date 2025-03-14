@@ -3,7 +3,14 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mycareer_new/core/bottom_nav/nav_bar.dart';
 import 'package:mycareer_new/core/nav/nav.dart';
+import 'package:mycareer_new/features/career_counsel/view/page/career_counsel.dart';
+import 'package:mycareer_new/features/career_counsel/view/page/career_counsel_detail.dart';
+import 'package:mycareer_new/features/career_counsel/view/page/career_counsel_detail_chat.dart';
+import 'package:mycareer_new/features/career_counsel/view/page/career_counsel_detail_payment.dart';
+import 'package:mycareer_new/features/career_counsel/view/page/career_counsel_list.dart';
 import 'package:mycareer_new/features/career_hub/view/page/career_hub.dart';
+import 'package:mycareer_new/features/chat_ai/chat_ai.dart';
+import 'package:mycareer_new/features/home/view/page/home.dart';
 import 'package:mycareer_new/features/job_pulse/page/job_pulse.dart';
 import 'package:mycareer_new/features/job_pulse/page/job_pulse_detail.dart';
 import 'package:mycareer_new/features/on_boarding/page/on_boarding.dart';
@@ -61,7 +68,7 @@ class MyApp extends StatelessWidget {
           home: child,
         );
       },
-      child: BottomNav(),
+      child: HomePage(),
     );
   }
 }

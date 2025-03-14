@@ -7,6 +7,7 @@ import 'package:mycareer_new/core/custom_widgets/custom_search_field_widget.dart
 import 'package:mycareer_new/core/custom_widgets/custom_text_bar_widget.dart';
 import 'package:mycareer_new/core/nav/nav.dart';
 import 'package:mycareer_new/core/theme/color_value.dart';
+import 'package:mycareer_new/features/career_counsel/view/page/career_counsel.dart';
 import 'package:mycareer_new/features/job_pulse/page/job_pulse.dart';
 import 'package:mycareer_new/features/scholar/view/page/scholar.dart';
 import 'package:mycareer_new/features/skill_quest/view/page/skill_quest.dart';
@@ -100,7 +101,9 @@ class _HomePageState extends State<HomePage> {
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   GestureDetector(
-                                    onTap: () {},
+                                    onTap: () {
+                                      Nav.to(context, CareerCounselPage());
+                                    },
                                     child: _buildBar(
                                       "Career Counsel",
                                       "box_career_counsel.svg",
@@ -213,7 +216,9 @@ class _HomePageState extends State<HomePage> {
       children: [
         Container(
           padding: EdgeInsets.all(13.w),
-          decoration: BoxDecoration(color: ColorValue.secondary20Color),
+          decoration: BoxDecoration(color: ColorValue.secondary20Color,
+          borderRadius: BorderRadius.circular(8.r)
+          ),
           child: Center(
             child: Column(
               children: [

@@ -9,8 +9,8 @@ import 'package:mycareer_new/features/profile/view/page/profile_edit.dart';
 import 'package:mycareer_new/features/profile/view/page/profile_education_experience.dart';
 import 'package:mycareer_new/features/profile/view/page/profile_porto.dart';
 import 'package:mycareer_new/features/profile/view/page/profile_stalker.dart';
+import 'package:mycareer_new/features/profile/view/page/profile_upload_porto.dart';
 import 'package:mycareer_new/features/profile/view/page/profile_work_experience.dart';
-import 'package:mycareer_new/features/skill_quest/view/page/skill_quest.dart';
 
 import '../../../../core/theme/color_value.dart';
 
@@ -106,7 +106,7 @@ class _ProfilePageState extends State<ProfilePage>
                                   ),
                                   _buildMenuItem(
                                     "Upload Portfolio",
-                                    Container(),
+                                    ProfileUploadPortoPage(),
                                   ),
                                   _buildMenuItem("CareerPath", Container()),
                                   _buildMenuItem(

@@ -3,6 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:mycareer_new/core/custom_widgets/custom_app_bar_widget.dart';
 import 'package:mycareer_new/core/custom_widgets/custom_search_field_widget.dart';
+import 'package:mycareer_new/core/nav/nav.dart';
+import 'package:mycareer_new/features/scholar/view/page/scholar_detail.dart';
 import 'package:mycareer_new/features/scholar/view/widgets/scholar_card_widget.dart';
 
 import '../../../../core/theme/color_value.dart';
@@ -67,7 +69,11 @@ class _ScholarPageState extends State<ScholarPage> {
               itemCount: 4,
               physics: NeverScrollableScrollPhysics(),
               itemBuilder: (context, index) {
-              return ScholarCardWidget();
+              return GestureDetector(
+                onTap: () {
+                  Nav.to(context, ScholarDetailPage());
+                },
+                  child: ScholarCardWidget());
             },)
           ],
         ),

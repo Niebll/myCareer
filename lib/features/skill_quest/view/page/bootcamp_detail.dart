@@ -3,7 +3,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:mycareer_new/core/custom_widgets/custom_app_bar_widget.dart';
 import 'package:mycareer_new/core/custom_widgets/custom_button_widget.dart';
+import 'package:mycareer_new/core/nav/nav.dart';
 import 'package:mycareer_new/core/theme/color_value.dart';
+import 'package:mycareer_new/features/skill_quest/view/page/bootcamp_detail_payment.dart';
 
 class BootcampDetailPage extends StatefulWidget {
   const BootcampDetailPage({Key? key}) : super(key: key);
@@ -148,7 +150,9 @@ class _BootcampDetailPageState extends State<BootcampDetailPage> {
               SizedBox(height: 16.h),
               _informationRegistrationContent("03 Januari 2025 - 04 Januari 2029", "Rp 100.000"),
             SizedBox(height: 32.h),
-              CustomButtonWidget(label: "Daftar", onPressed: () {}),
+              CustomButtonWidget(label: "Daftar", onPressed: () {
+                Nav.to(context, BootcampDetailPaymentPage());
+              }),
             ],
           ),
         ),
