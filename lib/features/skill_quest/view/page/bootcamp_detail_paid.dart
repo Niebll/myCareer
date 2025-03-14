@@ -9,43 +9,90 @@ import '../../../../core/custom_widgets/custom_text_bar_widget.dart';
 import '../../../../core/nav/nav.dart';
 
 class BootcampDetailPaidPage extends StatefulWidget {
-  const BootcampDetailPaidPage({Key? key}) : super(key: key);
+  bool isPaid;
+  BootcampDetailPaidPage({Key? key, this.isPaid = false}) : super(key: key);
 
   @override
   State<BootcampDetailPaidPage> createState() => _BootcampDetailPaidPageState();
 }
 
 class _BootcampDetailPaidPageState extends State<BootcampDetailPaidPage> {
+
+
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    Future.delayed(Duration(seconds: 3), () {
+      if (mounted) {
+        setState(() {
+          widget.isPaid = false;
+        });
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     TextTheme textTheme = TextTheme.of(context);
     return Scaffold(
       appBar: CustomAppBarWidget(title: "Bootcamp"),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 16.w),
-          child: Column(
-            children: [
-              SizedBox(height: 16.h),
-              _headCardContent(),
-              SizedBox(height: 16.h),
-              _headStartClass(),
-              SizedBox(height: 16.h,),
-              _headStartRamadhanClass(),
-              SizedBox(height: 16.h),
-              _subjectContent(),
-              SizedBox(height: 32.h),
-              CustomButtonWidget(
-                label: "Join Grup",
-                onPressed: () {
-                  Nav.to(context, BootcampDetailPaidPage());
-                },
-                isUnderLine: true,
+      body: Stack(
+        children: [
+          SingleChildScrollView(
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 16.w),
+              child: Column(
+                children: [
+                  SizedBox(height: 16.h),
+                  _headCardContent(),
+                  SizedBox(height: 16.h),
+                  _headStartClass(),
+                  SizedBox(height: 16.h,),
+                  _headStartRamadhanClass(),
+                  SizedBox(height: 16.h),
+                  _subjectContent(),
+                  SizedBox(height: 32.h),
+                  CustomButtonWidget(
+                    label: "Join Grup",
+                    onPressed: () {
+                      Nav.to(context, BootcampDetailPaidPage());
+                    },
+                    isUnderLine: true,
+                  ),
+                  SizedBox(height: 16.h,)
+                ],
               ),
-              SizedBox(height: 16.h,)
-            ],
+            ),
           ),
-        ),
+          if (widget.isPaid)
+            Align(
+              alignment: AlignmentDirectional.topCenter,
+              child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 4.h),
+                decoration: BoxDecoration(
+                  color: ColorValue.greenTintColor,
+                  borderRadius: BorderRadius.circular(8.r),
+                ),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    SvgPicture.asset("assets/icons/check.svg"),
+                    SizedBox(width: 8.w),
+                    Text(
+                      'Pembayaranmu Berhasil\nKamu bisa langsung Mulai Belajar',
+                      style: textTheme.bodyMedium!.copyWith(
+                        color: ColorValue.greenHueColor,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ],
+                ),
+              ),
+            )
+
+        ],
       ),
     );
   }

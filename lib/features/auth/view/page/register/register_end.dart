@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:mycareer_new/core/bottom_nav/nav_bar.dart';
 import 'package:mycareer_new/core/nav/nav.dart';
 import 'package:mycareer_new/core/theme/color_value.dart';
 import 'package:mycareer_new/features/home/view/page/home.dart';
@@ -57,7 +58,7 @@ class _RegisterEndPageState extends State<RegisterEndPage> {
             SizedBox(height: 16.h),
             GestureDetector(
               onTap: () {
-                Nav.to(context, HomePage());
+                Nav.toRemoveUntil(context, BottomNav());
               },
               child: Container(
                 width: 48.w,

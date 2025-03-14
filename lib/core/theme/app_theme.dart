@@ -94,29 +94,29 @@ class AppThemeData {
       ),
       inputDecorationTheme: InputDecorationTheme(
         enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: ColorValue.primary90Color),
+          borderSide: BorderSide(color: ColorValue.primary20Color),
           borderRadius: BorderRadius.circular(8.r),
         ),
         focusedBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: ColorValue.primary90Color),
+          borderSide: BorderSide(color: ColorValue.primary20Color),
           borderRadius: BorderRadius.circular(8.r),
         ),
         disabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: ColorValue.primary90Color),
+          borderSide: BorderSide(color: ColorValue.primary20Color),
           borderRadius: BorderRadius.circular(8.r),
         ),
         border: OutlineInputBorder(
-          borderSide: BorderSide(color: ColorValue.primary90Color),
+          borderSide: BorderSide(color: ColorValue.primary20Color),
           borderRadius: BorderRadius.circular(8.r),
         ),
         errorBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: ColorValue.primary90Color),
+          borderSide: BorderSide(color: ColorValue.primary20Color),
           borderRadius: BorderRadius.circular(8.r),
         ),
-        activeIndicatorBorder: BorderSide(color: ColorValue.primary90Color),
-        outlineBorder: BorderSide(color: ColorValue.primary90Color),
+        activeIndicatorBorder: BorderSide(color: ColorValue.primary20Color),
+        outlineBorder: BorderSide(color: ColorValue.primary20Color),
         focusedErrorBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: ColorValue.primary90Color),
+          borderSide: BorderSide(color: ColorValue.primary20Color),
           borderRadius: BorderRadius.circular(8.r),
         ),
       ),

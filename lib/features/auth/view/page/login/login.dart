@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:mycareer_new/core/bottom_nav/nav_bar.dart';
 import 'package:mycareer_new/core/custom_widgets/custom_button_widget.dart';
 import 'package:mycareer_new/core/custom_widgets/custom_form_widget.dart';
 import 'package:mycareer_new/core/nav/nav.dart';
 import 'package:mycareer_new/core/theme/color_value.dart';
+import 'package:mycareer_new/features/home/view/page/home.dart';
 
 import '../register/data_diri.dart';
 import '../register/register.dart';
@@ -74,7 +76,7 @@ class _LoginPageState extends State<LoginPage> {
               CustomButtonWidget(
                 label: "Login",
                 onPressed: () {
-                  Nav.to(context, DataDiriPage());
+                  Nav.toRemoveUntil(context, BottomNav());
                 },
               ),
               SizedBox(height: 16.h,),

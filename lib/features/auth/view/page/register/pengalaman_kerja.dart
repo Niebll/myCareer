@@ -64,7 +64,9 @@ class _PengalamanKerjaPageState extends State<PengalamanKerjaPage> {
             SizedBox(height: 16.h),
             CustomTipsCardWidget(text: "Tips : Kamu bisa melewati halaman ini jika belum memiliki pengalaman kerja"),
             Spacer(),
-            CustomButtonWidget(label: "Selanjutnya", onPressed: () {}),
+            CustomButtonWidget(label: "Selanjutnya", onPressed: () {
+              Nav.to(context, PengalamanKerjaDetailPage());
+            }),
             SizedBox(height: 16.h),
 
           ],

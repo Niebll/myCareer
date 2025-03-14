@@ -75,7 +75,7 @@ class _BootcampDetailPaymentPageState extends State<BootcampDetailPaymentPage> {
                 ),
               ),
               SizedBox(height: 132.h,),
-              CustomButtonWidget(label: "Bayar", onPressed: (){Nav.to(context, BootcampDetailPaidPage());})
+              CustomButtonWidget(label: "Bayar", onPressed: (){Nav.to(context, BootcampDetailPaidPage(isPaid: true,));})
             ],
           ),
         ),
